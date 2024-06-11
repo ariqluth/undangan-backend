@@ -1,0 +1,3008 @@
+{
+  "debugbar.openhandler": {
+    "name": "debugbar.openhandler",
+    "domain": null,
+    "action": "Barryvdh\\Debugbar\\Controllers\\OpenHandlerController@handle",
+    "uri": "_debugbar/open",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "debugbar.clockwork": {
+    "name": "debugbar.clockwork",
+    "domain": null,
+    "action": "Barryvdh\\Debugbar\\Controllers\\OpenHandlerController@clockwork",
+    "uri": "_debugbar/clockwork/{id}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "debugbar.assets.css": {
+    "name": "debugbar.assets.css",
+    "domain": null,
+    "action": "Barryvdh\\Debugbar\\Controllers\\AssetController@css",
+    "uri": "_debugbar/assets/stylesheets",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "debugbar.assets.js": {
+    "name": "debugbar.assets.js",
+    "domain": null,
+    "action": "Barryvdh\\Debugbar\\Controllers\\AssetController@js",
+    "uri": "_debugbar/assets/javascript",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "debugbar.cache.delete": {
+    "name": "debugbar.cache.delete",
+    "domain": null,
+    "action": "Barryvdh\\Debugbar\\Controllers\\CacheController@delete",
+    "uri": "_debugbar/cache/{key}/{tags?}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "cypress.factory": {
+    "name": "cypress.factory",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@factory",
+    "uri": "__cypress__/factory",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.login": {
+    "name": "cypress.login",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@login",
+    "uri": "__cypress__/login",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.logout": {
+    "name": "cypress.logout",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@logout",
+    "uri": "__cypress__/logout",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.artisan": {
+    "name": "cypress.artisan",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@artisan",
+    "uri": "__cypress__/artisan",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.run-php": {
+    "name": "cypress.run-php",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@runPhp",
+    "uri": "__cypress__/run-php",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.csrf-token": {
+    "name": "cypress.csrf-token",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@csrfToken",
+    "uri": "__cypress__/csrf_token",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "cypress.routes": {
+    "name": "cypress.routes",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@routes",
+    "uri": "__cypress__/routes",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.current-user": {
+    "name": "cypress.current-user",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@currentUser",
+    "uri": "__cypress__/current-user",
+    "method": [
+      "POST"
+    ]
+  },
+  "dusk.login": {
+    "name": "dusk.login",
+    "domain": null,
+    "action": "Laravel\\Dusk\\Http\\Controllers\\UserController@login",
+    "uri": "_dusk/login/{userId}/{guard?}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "dusk.logout": {
+    "name": "dusk.logout",
+    "domain": null,
+    "action": "Laravel\\Dusk\\Http\\Controllers\\UserController@logout",
+    "uri": "_dusk/logout/{guard?}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "dusk.user": {
+    "name": "dusk.user",
+    "domain": null,
+    "action": "Laravel\\Dusk\\Http\\Controllers\\UserController@user",
+    "uri": "_dusk/user/{guard?}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "login": {
+    "name": "login",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\AuthenticatedSessionController@create",
+    "uri": "login",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "generated::DP3IsN9J7p0kGVGq": {
+    "name": "generated::DP3IsN9J7p0kGVGq",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\AuthenticatedSessionController@store",
+    "uri": "login",
+    "method": [
+      "POST"
+    ]
+  },
+  "logout": {
+    "name": "logout",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\AuthenticatedSessionController@destroy",
+    "uri": "logout",
+    "method": [
+      "POST"
+    ]
+  },
+  "password.request": {
+    "name": "password.request",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\PasswordResetLinkController@create",
+    "uri": "forgot-password",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.reset": {
+    "name": "password.reset",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\NewPasswordController@create",
+    "uri": "reset-password/{token}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.email": {
+    "name": "password.email",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\PasswordResetLinkController@store",
+    "uri": "forgot-password",
+    "method": [
+      "POST"
+    ]
+  },
+  "password.update": {
+    "name": "password.update",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\NewPasswordController@store",
+    "uri": "reset-password",
+    "method": [
+      "POST"
+    ]
+  },
+  "register": {
+    "name": "register",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\RegisteredUserController@create",
+    "uri": "register",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "generated::9ODuSDZGf8m1PTzy": {
+    "name": "generated::9ODuSDZGf8m1PTzy",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\RegisteredUserController@store",
+    "uri": "register",
+    "method": [
+      "POST"
+    ]
+  },
+  "verification.notice": {
+    "name": "verification.notice",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\EmailVerificationPromptController@__invoke",
+    "uri": "email/verify",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "verification.verify": {
+    "name": "verification.verify",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\VerifyEmailController@__invoke",
+    "uri": "email/verify/{id}/{hash}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "verification.send": {
+    "name": "verification.send",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\EmailVerificationNotificationController@store",
+    "uri": "email/verification-notification",
+    "method": [
+      "POST"
+    ]
+  },
+  "user-profile-information.update": {
+    "name": "user-profile-information.update",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\ProfileInformationController@update",
+    "uri": "user/profile-information",
+    "method": [
+      "PUT"
+    ]
+  },
+  "user-password.update": {
+    "name": "user-password.update",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\PasswordController@update",
+    "uri": "user/password",
+    "method": [
+      "PUT"
+    ]
+  },
+  "generated::RJbnVaVchgvRQwKf": {
+    "name": "generated::RJbnVaVchgvRQwKf",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\ConfirmablePasswordController@show",
+    "uri": "user/confirm-password",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.confirmation": {
+    "name": "password.confirmation",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\ConfirmedPasswordStatusController@show",
+    "uri": "user/confirmed-password-status",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.confirm": {
+    "name": "password.confirm",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\ConfirmablePasswordController@store",
+    "uri": "user/confirm-password",
+    "method": [
+      "POST"
+    ]
+  },
+  "two-factor.login": {
+    "name": "two-factor.login",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController@create",
+    "uri": "two-factor-challenge",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "generated::09bIyiHIfNbLpwOy": {
+    "name": "generated::09bIyiHIfNbLpwOy",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController@store",
+    "uri": "two-factor-challenge",
+    "method": [
+      "POST"
+    ]
+  },
+  "two-factor.enable": {
+    "name": "two-factor.enable",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticationController@store",
+    "uri": "user/two-factor-authentication",
+    "method": [
+      "POST"
+    ]
+  },
+  "two-factor.confirm": {
+    "name": "two-factor.confirm",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\ConfirmedTwoFactorAuthenticationController@store",
+    "uri": "user/confirmed-two-factor-authentication",
+    "method": [
+      "POST"
+    ]
+  },
+  "two-factor.disable": {
+    "name": "two-factor.disable",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticationController@destroy",
+    "uri": "user/two-factor-authentication",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "two-factor.qr-code": {
+    "name": "two-factor.qr-code",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\TwoFactorQrCodeController@show",
+    "uri": "user/two-factor-qr-code",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "two-factor.secret-key": {
+    "name": "two-factor.secret-key",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\TwoFactorSecretKeyController@show",
+    "uri": "user/two-factor-secret-key",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "two-factor.recovery-codes": {
+    "name": "two-factor.recovery-codes",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\RecoveryCodeController@index",
+    "uri": "user/two-factor-recovery-codes",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "generated::7Hl4iyZVpRfsz18q": {
+    "name": "generated::7Hl4iyZVpRfsz18q",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\RecoveryCodeController@store",
+    "uri": "user/two-factor-recovery-codes",
+    "method": [
+      "POST"
+    ]
+  },
+  "generated::TsGLDUnc094PPWE6": {
+    "name": "generated::TsGLDUnc094PPWE6",
+    "domain": null,
+    "action": "Laravel\\Sanctum\\Http\\Controllers\\CsrfCookieController@show",
+    "uri": "sanctum/csrf-cookie",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "ignition.healthCheck": {
+    "name": "ignition.healthCheck",
+    "domain": null,
+    "action": "Spatie\\LaravelIgnition\\Http\\Controllers\\HealthCheckController",
+    "uri": "_ignition/health-check",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "ignition.executeSolution": {
+    "name": "ignition.executeSolution",
+    "domain": null,
+    "action": "Spatie\\LaravelIgnition\\Http\\Controllers\\ExecuteSolutionController",
+    "uri": "_ignition/execute-solution",
+    "method": [
+      "POST"
+    ]
+  },
+  "ignition.updateConfig": {
+    "name": "ignition.updateConfig",
+    "domain": null,
+    "action": "Spatie\\LaravelIgnition\\Http\\Controllers\\UpdateConfigController",
+    "uri": "_ignition/update-config",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.kbli-perusahaan.index": {
+    "name": "api.kbli-perusahaan.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKbliPerusahaanController@index",
+    "uri": "api/kbli-perusahaan",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.kbli-perusahaan.store": {
+    "name": "api.kbli-perusahaan.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKbliPerusahaanController@store",
+    "uri": "api/kbli-perusahaan",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.kbli-perusahaan.show": {
+    "name": "api.kbli-perusahaan.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKbliPerusahaanController@show",
+    "uri": "api/kbli-perusahaan/{kbli_perusahaan}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.kbli-perusahaan.update": {
+    "name": "api.kbli-perusahaan.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKbliPerusahaanController@update",
+    "uri": "api/kbli-perusahaan/{kbli_perusahaan}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "api.kbli-perusahaan.destroy": {
+    "name": "api.kbli-perusahaan.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKbliPerusahaanController@destroy",
+    "uri": "api/kbli-perusahaan/{kbli_perusahaan}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "generated::VD93fQSnVvXC7Ok9": {
+    "name": "generated::VD93fQSnVvXC7Ok9",
+    "domain": null,
+    "action": "Closure",
+    "uri": "api/user",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "generated::759WdeZqAZ9nO1Wq": {
+    "name": "generated::759WdeZqAZ9nO1Wq",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\AuthController@login",
+    "uri": "api/auth/login",
+    "method": [
+      "POST"
+    ]
+  },
+  "generated::64xbx9tExGIPvuMi": {
+    "name": "generated::64xbx9tExGIPvuMi",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\AuthController@register",
+    "uri": "api/auth/register",
+    "method": [
+      "POST"
+    ]
+  },
+  "generated::OcdlAjfBB1x3LNcy": {
+    "name": "generated::OcdlAjfBB1x3LNcy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\AuthController@forgot_password",
+    "uri": "api/forgot-password",
+    "method": [
+      "POST"
+    ]
+  },
+  "generated::oYJhzjnky8F9Hic4": {
+    "name": "generated::oYJhzjnky8F9Hic4",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\AuthController@logout",
+    "uri": "api/auth/logout",
+    "method": [
+      "POST"
+    ]
+  },
+  "generated::H8ZMgL0ldbohi38K": {
+    "name": "generated::H8ZMgL0ldbohi38K",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\AuthController@change_password",
+    "uri": "api/reset-password",
+    "method": [
+      "POST"
+    ]
+  },
+  "generated::FKCPlHqw0qTZUmTZ": {
+    "name": "generated::FKCPlHqw0qTZUmTZ",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\AuthController@editProfile",
+    "uri": "api/edit-profile",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.kabupaten.index": {
+    "name": "api.kabupaten.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKabupatenController@index",
+    "uri": "api/kabupaten",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.kabupaten.store": {
+    "name": "api.kabupaten.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKabupatenController@store",
+    "uri": "api/kabupaten",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.kabupaten.show": {
+    "name": "api.kabupaten.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKabupatenController@show",
+    "uri": "api/kabupaten/{kabupaten}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.kabupaten.update": {
+    "name": "api.kabupaten.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKabupatenController@update",
+    "uri": "api/kabupaten/{kabupaten}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "api.kecamatan.index": {
+    "name": "api.kecamatan.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKecamatanController@index",
+    "uri": "api/kecamatan",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.kecamatan.store": {
+    "name": "api.kecamatan.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKecamatanController@store",
+    "uri": "api/kecamatan",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.kecamatan.show": {
+    "name": "api.kecamatan.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKecamatanController@show",
+    "uri": "api/kecamatan/{kecamatan}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.kecamatan.update": {
+    "name": "api.kecamatan.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKecamatanController@update",
+    "uri": "api/kecamatan/{kecamatan}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "api.kelurahan.index": {
+    "name": "api.kelurahan.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKelurahanController@index",
+    "uri": "api/kelurahan",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.kelurahan.store": {
+    "name": "api.kelurahan.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKelurahanController@store",
+    "uri": "api/kelurahan",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.kelurahan.show": {
+    "name": "api.kelurahan.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKelurahanController@show",
+    "uri": "api/kelurahan/{kelurahan}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.kelurahan.update": {
+    "name": "api.kelurahan.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKelurahanController@update",
+    "uri": "api/kelurahan/{kelurahan}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "api.kbli.index": {
+    "name": "api.kbli.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKBliController@index",
+    "uri": "api/kbli",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.kbli.store": {
+    "name": "api.kbli.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKBliController@store",
+    "uri": "api/kbli",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.kbli.show": {
+    "name": "api.kbli.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKBliController@show",
+    "uri": "api/kbli/{kbli}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.kbli.update": {
+    "name": "api.kbli.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiKBliController@update",
+    "uri": "api/kbli/{kbli}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "api.uraian-jenis-perusahaan.index": {
+    "name": "api.uraian-jenis-perusahaan.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianJenisPerusahaanController@index",
+    "uri": "api/uraian-jenis-perusahaan",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.uraian-jenis-perusahaan.store": {
+    "name": "api.uraian-jenis-perusahaan.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianJenisPerusahaanController@store",
+    "uri": "api/uraian-jenis-perusahaan",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.uraian-jenis-perusahaan.show": {
+    "name": "api.uraian-jenis-perusahaan.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianJenisPerusahaanController@show",
+    "uri": "api/uraian-jenis-perusahaan/{uraian_jenis_perusahaan}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.uraian-jenis-perusahaan.update": {
+    "name": "api.uraian-jenis-perusahaan.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianJenisPerusahaanController@update",
+    "uri": "api/uraian-jenis-perusahaan/{uraian_jenis_perusahaan}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "api.uraian-resiko-proyek.index": {
+    "name": "api.uraian-resiko-proyek.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianResikoProyekController@index",
+    "uri": "api/uraian-resiko-proyek",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.uraian-resiko-proyek.store": {
+    "name": "api.uraian-resiko-proyek.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianResikoProyekController@store",
+    "uri": "api/uraian-resiko-proyek",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.uraian-resiko-proyek.show": {
+    "name": "api.uraian-resiko-proyek.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianResikoProyekController@show",
+    "uri": "api/uraian-resiko-proyek/{uraian_resiko_proyek}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.uraian-resiko-proyek.update": {
+    "name": "api.uraian-resiko-proyek.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianResikoProyekController@update",
+    "uri": "api/uraian-resiko-proyek/{uraian_resiko_proyek}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "api.uraian-skala-usaha.index": {
+    "name": "api.uraian-skala-usaha.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianSkalaUsahaController@index",
+    "uri": "api/uraian-skala-usaha",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.uraian-skala-usaha.store": {
+    "name": "api.uraian-skala-usaha.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianSkalaUsahaController@store",
+    "uri": "api/uraian-skala-usaha",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.uraian-skala-usaha.show": {
+    "name": "api.uraian-skala-usaha.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianSkalaUsahaController@show",
+    "uri": "api/uraian-skala-usaha/{uraian_skala_usaha}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.uraian-skala-usaha.update": {
+    "name": "api.uraian-skala-usaha.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiUraianSkalaUsahaController@update",
+    "uri": "api/uraian-skala-usaha/{uraian_skala_usaha}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "api.profile-pengusaha.index": {
+    "name": "api.profile-pengusaha.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiProfilePengusahaController@index",
+    "uri": "api/profile-pengusaha",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.profile-pengusaha.store": {
+    "name": "api.profile-pengusaha.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiProfilePengusahaController@store",
+    "uri": "api/profile-pengusaha",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.profile-pengusaha.show": {
+    "name": "api.profile-pengusaha.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiProfilePengusahaController@show",
+    "uri": "api/profile-pengusaha/{profile_pengusaha}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.profile-pengusaha.update": {
+    "name": "api.profile-pengusaha.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiProfilePengusahaController@update",
+    "uri": "api/profile-pengusaha/{profile_pengusaha}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "api.perusahaan.index": {
+    "name": "api.perusahaan.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiPerusahaanController@index",
+    "uri": "api/perusahaan",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.perusahaan.store": {
+    "name": "api.perusahaan.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiPerusahaanController@store",
+    "uri": "api/perusahaan",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.perusahaan.show": {
+    "name": "api.perusahaan.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiPerusahaanController@show",
+    "uri": "api/perusahaan/{perusahaan}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.perusahaan.update": {
+    "name": "api.perusahaan.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\ApiPerusahaanController@update",
+    "uri": "api/perusahaan/{perusahaan}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "category.index": {
+    "name": "category.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\CategoryController@index",
+    "uri": "api/category",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "category.store": {
+    "name": "category.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\CategoryController@store",
+    "uri": "api/category",
+    "method": [
+      "POST"
+    ]
+  },
+  "category.show": {
+    "name": "category.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\CategoryController@show",
+    "uri": "api/category/{category}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "category.update": {
+    "name": "category.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\CategoryController@update",
+    "uri": "api/category/{category}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "category.destroy": {
+    "name": "category.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Api\\CategoryController@destroy",
+    "uri": "api/category/{category}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "api.assign-approve.index": {
+    "name": "api.assign-approve.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ApiAssignApproveController@index",
+    "uri": "api/assign-approve",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.assign-approve.store": {
+    "name": "api.assign-approve.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ApiAssignApproveController@store",
+    "uri": "api/assign-approve",
+    "method": [
+      "POST"
+    ]
+  },
+  "api.assign-approve.show": {
+    "name": "api.assign-approve.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ApiAssignApproveController@show",
+    "uri": "api/assign-approve/{assign_approve}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.assign-approve.update": {
+    "name": "api.assign-approve.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ApiAssignApproveController@update",
+    "uri": "api/assign-approve/{assign_approve}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "api.assign-approve.destroy": {
+    "name": "api.assign-approve.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ApiAssignApproveController@destroy",
+    "uri": "api/assign-approve/{assign_approve}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "api.assign.approve.getAssignApproveByUser": {
+    "name": "api.assign.approve.getAssignApproveByUser",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ApiAssignApproveController@getAssignApproveByUser",
+    "uri": "api/assign-approve/get-assign/{user_id}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api.assign.approve.getListWaitApproveByUser": {
+    "name": "api.assign.approve.getListWaitApproveByUser",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ApiAssignApproveController@getListWaitApproveByUser",
+    "uri": "api/assign-approve/list-wait-assign/{user_id}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "visitor.utama": {
+    "name": "visitor.utama",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\VisitorController@utama",
+    "uri": "/",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "visitor.show": {
+    "name": "visitor.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\VisitorArtikelController@show",
+    "uri": "show-artikel",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "visitor.mapvisitor": {
+    "name": "visitor.mapvisitor",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\VisitorController@mapvisitor",
+    "uri": "show-map",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "visitor.detail": {
+    "name": "visitor.detail",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\VisitorArtikelController@detail",
+    "uri": "show-artikel-detail/{visitor}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "fetchCompanyData": {
+    "name": "fetchCompanyData",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\VisitorController@fetchCompanyData",
+    "uri": "api/company/{id}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "dashboard": {
+    "name": "dashboard",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\DashboardController@index",
+    "uri": "dashboard",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "profile.edit": {
+    "name": "profile.edit",
+    "domain": null,
+    "action": "Closure",
+    "uri": "profile",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "visitor.index": {
+    "name": "visitor.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\VisitorController@index",
+    "uri": "visitor",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "artikel.import": {
+    "name": "artikel.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ArtikelController@import",
+    "uri": "artikel-management/artikel/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "artikel.export": {
+    "name": "artikel.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ArtikelController@export",
+    "uri": "artikel-management/artikel/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "artikel": {
+    "name": "artikel",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ArtikelController@index",
+    "uri": "artikel-management/artikel/index",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "artikel.search": {
+    "name": "artikel.search",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ArtikelController@search",
+    "uri": "artikel-management/artikel/search",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "artikel.index": {
+    "name": "artikel.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ArtikelController@index",
+    "uri": "artikel-management/artikel",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "artikel.create": {
+    "name": "artikel.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ArtikelController@create",
+    "uri": "artikel-management/artikel/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "artikel.store": {
+    "name": "artikel.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ArtikelController@store",
+    "uri": "artikel-management/artikel",
+    "method": [
+      "POST"
+    ]
+  },
+  "artikel.show": {
+    "name": "artikel.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ArtikelController@show",
+    "uri": "artikel-management/artikel/{artikel}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "artikel.edit": {
+    "name": "artikel.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ArtikelController@edit",
+    "uri": "artikel-management/artikel/{artikel}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "artikel.update": {
+    "name": "artikel.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ArtikelController@update",
+    "uri": "artikel-management/artikel/{artikel}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "artikel.destroy": {
+    "name": "artikel.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ArtikelController@destroy",
+    "uri": "artikel-management/artikel/{artikel}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "kategori-artikel": {
+    "name": "kategori-artikel",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KategoriArtikelController@index",
+    "uri": "artikel-management/kategori-artikel/index",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kategori-artikel.import": {
+    "name": "kategori-artikel.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KategoriArtikelController@import",
+    "uri": "artikel-management/kategori-artikel/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "kategori-artikel.export": {
+    "name": "kategori-artikel.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KategoriArtikelController@export",
+    "uri": "artikel-management/kategori-artikel/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kategori-artikel.index": {
+    "name": "kategori-artikel.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KategoriArtikelController@index",
+    "uri": "artikel-management/kategori-artikel",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kategori-artikel.create": {
+    "name": "kategori-artikel.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KategoriArtikelController@create",
+    "uri": "artikel-management/kategori-artikel/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kategori-artikel.store": {
+    "name": "kategori-artikel.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KategoriArtikelController@store",
+    "uri": "artikel-management/kategori-artikel",
+    "method": [
+      "POST"
+    ]
+  },
+  "kategori-artikel.show": {
+    "name": "kategori-artikel.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KategoriArtikelController@show",
+    "uri": "artikel-management/kategori-artikel/{kategori_artikel}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kategori-artikel.edit": {
+    "name": "kategori-artikel.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KategoriArtikelController@edit",
+    "uri": "artikel-management/kategori-artikel/{kategori_artikel}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kategori-artikel.update": {
+    "name": "kategori-artikel.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KategoriArtikelController@update",
+    "uri": "artikel-management/kategori-artikel/{kategori_artikel}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "kategori-artikel.destroy": {
+    "name": "kategori-artikel.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KategoriArtikelController@destroy",
+    "uri": "artikel-management/kategori-artikel/{kategori_artikel}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "user.index": {
+    "name": "user.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UserController@index",
+    "uri": "user-management/user",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "user.create": {
+    "name": "user.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UserController@create",
+    "uri": "user-management/user/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "user.store": {
+    "name": "user.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UserController@store",
+    "uri": "user-management/user",
+    "method": [
+      "POST"
+    ]
+  },
+  "user.show": {
+    "name": "user.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UserController@show",
+    "uri": "user-management/user/{user}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "user.edit": {
+    "name": "user.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UserController@edit",
+    "uri": "user-management/user/{user}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "user.update": {
+    "name": "user.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UserController@update",
+    "uri": "user-management/user/{user}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "user.destroy": {
+    "name": "user.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UserController@destroy",
+    "uri": "user-management/user/{user}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "user.verify-email": {
+    "name": "user.verify-email",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UserController@verifyEmail",
+    "uri": "user-management/verify-email/{id}/{hash}",
+    "method": [
+      "GET",
+      "POST",
+      "HEAD"
+    ]
+  },
+  "user.delete-verify-email": {
+    "name": "user.delete-verify-email",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UserController@verifyEmail",
+    "uri": "user-management/verify-email/{id}/{hash}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "user.import": {
+    "name": "user.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UserController@import",
+    "uri": "user-management/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "user.export": {
+    "name": "user.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UserController@export",
+    "uri": "user-management/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "user.demo": {
+    "name": "user.demo",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\DemoController",
+    "uri": "user-management/demo",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "menu-group.index": {
+    "name": "menu-group.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuGroupController@index",
+    "uri": "menu-management/menu-group",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "menu-group.create": {
+    "name": "menu-group.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuGroupController@create",
+    "uri": "menu-management/menu-group/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "menu-group.store": {
+    "name": "menu-group.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuGroupController@store",
+    "uri": "menu-management/menu-group",
+    "method": [
+      "POST"
+    ]
+  },
+  "menu-group.show": {
+    "name": "menu-group.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuGroupController@show",
+    "uri": "menu-management/menu-group/{menu_group}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "menu-group.edit": {
+    "name": "menu-group.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuGroupController@edit",
+    "uri": "menu-management/menu-group/{menu_group}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "menu-group.update": {
+    "name": "menu-group.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuGroupController@update",
+    "uri": "menu-management/menu-group/{menu_group}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "menu-group.destroy": {
+    "name": "menu-group.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuGroupController@destroy",
+    "uri": "menu-management/menu-group/{menu_group}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "menu-group.move-up": {
+    "name": "menu-group.move-up",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuGroupController@moveUp",
+    "uri": "menu-management/menu-group/{id}/move-up",
+    "method": [
+      "POST"
+    ]
+  },
+  "menu-group.move-down": {
+    "name": "menu-group.move-down",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuGroupController@moveDown",
+    "uri": "menu-management/menu-group/{id}/move-down",
+    "method": [
+      "POST"
+    ]
+  },
+  "menu-item.index": {
+    "name": "menu-item.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuItemController@index",
+    "uri": "menu-management/menu-item",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "menu-item.create": {
+    "name": "menu-item.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuItemController@create",
+    "uri": "menu-management/menu-item/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "menu-item.store": {
+    "name": "menu-item.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuItemController@store",
+    "uri": "menu-management/menu-item",
+    "method": [
+      "POST"
+    ]
+  },
+  "menu-item.show": {
+    "name": "menu-item.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuItemController@show",
+    "uri": "menu-management/menu-item/{menu_item}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "menu-item.edit": {
+    "name": "menu-item.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuItemController@edit",
+    "uri": "menu-management/menu-item/{menu_item}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "menu-item.update": {
+    "name": "menu-item.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuItemController@update",
+    "uri": "menu-management/menu-item/{menu_item}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "menu-item.destroy": {
+    "name": "menu-item.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Menu\\MenuItemController@destroy",
+    "uri": "menu-management/menu-item/{menu_item}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "role.index": {
+    "name": "role.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\RoleController@index",
+    "uri": "role-and-permission/role",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "role.create": {
+    "name": "role.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\RoleController@create",
+    "uri": "role-and-permission/role/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "role.store": {
+    "name": "role.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\RoleController@store",
+    "uri": "role-and-permission/role",
+    "method": [
+      "POST"
+    ]
+  },
+  "role.show": {
+    "name": "role.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\RoleController@show",
+    "uri": "role-and-permission/role/{role}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "role.edit": {
+    "name": "role.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\RoleController@edit",
+    "uri": "role-and-permission/role/{role}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "role.update": {
+    "name": "role.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\RoleController@update",
+    "uri": "role-and-permission/role/{role}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "role.destroy": {
+    "name": "role.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\RoleController@destroy",
+    "uri": "role-and-permission/role/{role}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "role.export": {
+    "name": "role.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\ExportRoleController",
+    "uri": "role-and-permission/role/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "role.import": {
+    "name": "role.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\ImportRoleController",
+    "uri": "role-and-permission/role/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "permission.index": {
+    "name": "permission.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\PermissionController@index",
+    "uri": "role-and-permission/permission",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "permission.create": {
+    "name": "permission.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\PermissionController@create",
+    "uri": "role-and-permission/permission/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "permission.store": {
+    "name": "permission.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\PermissionController@store",
+    "uri": "role-and-permission/permission",
+    "method": [
+      "POST"
+    ]
+  },
+  "permission.show": {
+    "name": "permission.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\PermissionController@show",
+    "uri": "role-and-permission/permission/{permission}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "permission.edit": {
+    "name": "permission.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\PermissionController@edit",
+    "uri": "role-and-permission/permission/{permission}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "permission.update": {
+    "name": "permission.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\PermissionController@update",
+    "uri": "role-and-permission/permission/{permission}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "permission.destroy": {
+    "name": "permission.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\PermissionController@destroy",
+    "uri": "role-and-permission/permission/{permission}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "permission.export": {
+    "name": "permission.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\ExportPermissionController",
+    "uri": "role-and-permission/permission/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "permission.import": {
+    "name": "permission.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\ImportPermissionController",
+    "uri": "role-and-permission/permission/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "assign.index": {
+    "name": "assign.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\AssignPermissionController@index",
+    "uri": "role-and-permission/assign",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "assign.create": {
+    "name": "assign.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\AssignPermissionController@create",
+    "uri": "role-and-permission/assign/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "assign.edit": {
+    "name": "assign.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\AssignPermissionController@edit",
+    "uri": "role-and-permission/assign/{role}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "assign.update": {
+    "name": "assign.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\AssignPermissionController@update",
+    "uri": "role-and-permission/assign/{role}",
+    "method": [
+      "PUT"
+    ]
+  },
+  "assign.store": {
+    "name": "assign.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\AssignPermissionController@store",
+    "uri": "role-and-permission/assign",
+    "method": [
+      "POST"
+    ]
+  },
+  "assign.user.index": {
+    "name": "assign.user.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\AssignUserToRoleController@index",
+    "uri": "role-and-permission/assign-user",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "assign.user.create": {
+    "name": "assign.user.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\AssignUserToRoleController@create",
+    "uri": "role-and-permission/assign-user/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "assign.user.store": {
+    "name": "assign.user.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\AssignUserToRoleController@store",
+    "uri": "role-and-permission/assign-user",
+    "method": [
+      "POST"
+    ]
+  },
+  "assign.user.edit": {
+    "name": "assign.user.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\AssignUserToRoleController@edit",
+    "uri": "role-and-permission/assing-user/{user}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "assign.user.update": {
+    "name": "assign.user.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\RoleAndPermission\\AssignUserToRoleController@update",
+    "uri": "role-and-permission/assign-user/{user}",
+    "method": [
+      "PUT"
+    ]
+  },
+  "kabupaten.import": {
+    "name": "kabupaten.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KabupatenController@import",
+    "uri": "master-table-management/kabupaten/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "kabupaten.export": {
+    "name": "kabupaten.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KabupatenController@export",
+    "uri": "master-table-management/kabupaten/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kabupaten.index": {
+    "name": "kabupaten.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KabupatenController@index",
+    "uri": "master-table-management/kabupaten",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kabupaten.create": {
+    "name": "kabupaten.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KabupatenController@create",
+    "uri": "master-table-management/kabupaten/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kabupaten.store": {
+    "name": "kabupaten.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KabupatenController@store",
+    "uri": "master-table-management/kabupaten",
+    "method": [
+      "POST"
+    ]
+  },
+  "kabupaten.show": {
+    "name": "kabupaten.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KabupatenController@show",
+    "uri": "master-table-management/kabupaten/{kabupaten}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kabupaten.edit": {
+    "name": "kabupaten.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KabupatenController@edit",
+    "uri": "master-table-management/kabupaten/{kabupaten}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kabupaten.update": {
+    "name": "kabupaten.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KabupatenController@update",
+    "uri": "master-table-management/kabupaten/{kabupaten}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "kabupaten.destroy": {
+    "name": "kabupaten.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KabupatenController@destroy",
+    "uri": "master-table-management/kabupaten/{kabupaten}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "kecamatan.import": {
+    "name": "kecamatan.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KecamatanController@import",
+    "uri": "master-table-management/kecamatan/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "kecamatan.export": {
+    "name": "kecamatan.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KecamatanController@export",
+    "uri": "master-table-management/kecamatan/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kecamatan.index": {
+    "name": "kecamatan.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KecamatanController@index",
+    "uri": "master-table-management/kecamatan",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kecamatan.create": {
+    "name": "kecamatan.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KecamatanController@create",
+    "uri": "master-table-management/kecamatan/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kecamatan.store": {
+    "name": "kecamatan.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KecamatanController@store",
+    "uri": "master-table-management/kecamatan",
+    "method": [
+      "POST"
+    ]
+  },
+  "kecamatan.show": {
+    "name": "kecamatan.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KecamatanController@show",
+    "uri": "master-table-management/kecamatan/{kecamatan}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kecamatan.edit": {
+    "name": "kecamatan.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KecamatanController@edit",
+    "uri": "master-table-management/kecamatan/{kecamatan}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kecamatan.update": {
+    "name": "kecamatan.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KecamatanController@update",
+    "uri": "master-table-management/kecamatan/{kecamatan}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "kecamatan.destroy": {
+    "name": "kecamatan.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KecamatanController@destroy",
+    "uri": "master-table-management/kecamatan/{kecamatan}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "kelurahan.import": {
+    "name": "kelurahan.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KelurahanController@import",
+    "uri": "master-table-management/kelurahan/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "kelurahan.export": {
+    "name": "kelurahan.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KelurahanController@export",
+    "uri": "master-table-management/kelurahan/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kelurahan.index": {
+    "name": "kelurahan.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KelurahanController@index",
+    "uri": "master-table-management/kelurahan",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kelurahan.create": {
+    "name": "kelurahan.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KelurahanController@create",
+    "uri": "master-table-management/kelurahan/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kelurahan.store": {
+    "name": "kelurahan.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KelurahanController@store",
+    "uri": "master-table-management/kelurahan",
+    "method": [
+      "POST"
+    ]
+  },
+  "kelurahan.show": {
+    "name": "kelurahan.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KelurahanController@show",
+    "uri": "master-table-management/kelurahan/{kelurahan}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kelurahan.edit": {
+    "name": "kelurahan.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KelurahanController@edit",
+    "uri": "master-table-management/kelurahan/{kelurahan}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kelurahan.update": {
+    "name": "kelurahan.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KelurahanController@update",
+    "uri": "master-table-management/kelurahan/{kelurahan}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "kelurahan.destroy": {
+    "name": "kelurahan.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KelurahanController@destroy",
+    "uri": "master-table-management/kelurahan/{kelurahan}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "kecamatan.filters": {
+    "name": "kecamatan.filters",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KelurahanController@kecamatanFilter",
+    "uri": "master-table-management/kecamatan-filter",
+    "method": [
+      "POST"
+    ]
+  },
+  "editkecamatan.filters": {
+    "name": "editkecamatan.filters",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KelurahanController@kecamataneditFilter",
+    "uri": "master-table-management/edkecamatan-filter",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kbli.import": {
+    "name": "kbli.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliController@import",
+    "uri": "master-table-management/kbli/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "kbli.export": {
+    "name": "kbli.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliController@export",
+    "uri": "master-table-management/kbli/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kbli.index": {
+    "name": "kbli.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliController@index",
+    "uri": "master-table-management/kbli",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kbli.create": {
+    "name": "kbli.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliController@create",
+    "uri": "master-table-management/kbli/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kbli.store": {
+    "name": "kbli.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliController@store",
+    "uri": "master-table-management/kbli",
+    "method": [
+      "POST"
+    ]
+  },
+  "kbli.show": {
+    "name": "kbli.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliController@show",
+    "uri": "master-table-management/kbli/{kbli}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kbli.edit": {
+    "name": "kbli.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliController@edit",
+    "uri": "master-table-management/kbli/{kbli}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kbli.update": {
+    "name": "kbli.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliController@update",
+    "uri": "master-table-management/kbli/{kbli}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "kbli.destroy": {
+    "name": "kbli.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliController@destroy",
+    "uri": "master-table-management/kbli/{kbli}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "uraian.jenis.perusahaan.import": {
+    "name": "uraian.jenis.perusahaan.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianJenisPerusahaanController@import",
+    "uri": "master-table-management/uraian-jenis-perusahaan/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "uraian.jenis.perusahaan.export": {
+    "name": "uraian.jenis.perusahaan.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianJenisPerusahaanController@export",
+    "uri": "master-table-management/uraian-jenis-perusahaan/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-jenis-perusahaan.index": {
+    "name": "uraian-jenis-perusahaan.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianJenisPerusahaanController@index",
+    "uri": "master-table-management/uraian-jenis-perusahaan",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-jenis-perusahaan.create": {
+    "name": "uraian-jenis-perusahaan.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianJenisPerusahaanController@create",
+    "uri": "master-table-management/uraian-jenis-perusahaan/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-jenis-perusahaan.store": {
+    "name": "uraian-jenis-perusahaan.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianJenisPerusahaanController@store",
+    "uri": "master-table-management/uraian-jenis-perusahaan",
+    "method": [
+      "POST"
+    ]
+  },
+  "uraian-jenis-perusahaan.show": {
+    "name": "uraian-jenis-perusahaan.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianJenisPerusahaanController@show",
+    "uri": "master-table-management/uraian-jenis-perusahaan/{uraian_jenis_perusahaan}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-jenis-perusahaan.edit": {
+    "name": "uraian-jenis-perusahaan.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianJenisPerusahaanController@edit",
+    "uri": "master-table-management/uraian-jenis-perusahaan/{uraian_jenis_perusahaan}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-jenis-perusahaan.update": {
+    "name": "uraian-jenis-perusahaan.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianJenisPerusahaanController@update",
+    "uri": "master-table-management/uraian-jenis-perusahaan/{uraian_jenis_perusahaan}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "uraian-jenis-perusahaan.destroy": {
+    "name": "uraian-jenis-perusahaan.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianJenisPerusahaanController@destroy",
+    "uri": "master-table-management/uraian-jenis-perusahaan/{uraian_jenis_perusahaan}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "uraian.resiko.proyek.import": {
+    "name": "uraian.resiko.proyek.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianResikoProyekController@import",
+    "uri": "master-table-management/uraian-resiko-proyek/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "uraian.resiko.proyek.export": {
+    "name": "uraian.resiko.proyek.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianResikoProyekController@export",
+    "uri": "master-table-management/uraian-resiko-proyek/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-resiko-proyek.index": {
+    "name": "uraian-resiko-proyek.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianResikoProyekController@index",
+    "uri": "master-table-management/uraian-resiko-proyek",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-resiko-proyek.create": {
+    "name": "uraian-resiko-proyek.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianResikoProyekController@create",
+    "uri": "master-table-management/uraian-resiko-proyek/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-resiko-proyek.store": {
+    "name": "uraian-resiko-proyek.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianResikoProyekController@store",
+    "uri": "master-table-management/uraian-resiko-proyek",
+    "method": [
+      "POST"
+    ]
+  },
+  "uraian-resiko-proyek.show": {
+    "name": "uraian-resiko-proyek.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianResikoProyekController@show",
+    "uri": "master-table-management/uraian-resiko-proyek/{uraian_resiko_proyek}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-resiko-proyek.edit": {
+    "name": "uraian-resiko-proyek.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianResikoProyekController@edit",
+    "uri": "master-table-management/uraian-resiko-proyek/{uraian_resiko_proyek}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-resiko-proyek.update": {
+    "name": "uraian-resiko-proyek.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianResikoProyekController@update",
+    "uri": "master-table-management/uraian-resiko-proyek/{uraian_resiko_proyek}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "uraian-resiko-proyek.destroy": {
+    "name": "uraian-resiko-proyek.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianResikoProyekController@destroy",
+    "uri": "master-table-management/uraian-resiko-proyek/{uraian_resiko_proyek}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "uraian.skala.usaha.import": {
+    "name": "uraian.skala.usaha.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianSkalaUsahaController@import",
+    "uri": "master-table-management/uraian-skala-usaha/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "uraian.skala.usaha.export": {
+    "name": "uraian.skala.usaha.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianSkalaUsahaController@export",
+    "uri": "master-table-management/uraian-skala-usaha/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-skala-usaha.index": {
+    "name": "uraian-skala-usaha.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianSkalaUsahaController@index",
+    "uri": "master-table-management/uraian-skala-usaha",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-skala-usaha.create": {
+    "name": "uraian-skala-usaha.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianSkalaUsahaController@create",
+    "uri": "master-table-management/uraian-skala-usaha/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-skala-usaha.store": {
+    "name": "uraian-skala-usaha.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianSkalaUsahaController@store",
+    "uri": "master-table-management/uraian-skala-usaha",
+    "method": [
+      "POST"
+    ]
+  },
+  "uraian-skala-usaha.show": {
+    "name": "uraian-skala-usaha.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianSkalaUsahaController@show",
+    "uri": "master-table-management/uraian-skala-usaha/{uraian_skala_usaha}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-skala-usaha.edit": {
+    "name": "uraian-skala-usaha.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianSkalaUsahaController@edit",
+    "uri": "master-table-management/uraian-skala-usaha/{uraian_skala_usaha}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "uraian-skala-usaha.update": {
+    "name": "uraian-skala-usaha.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianSkalaUsahaController@update",
+    "uri": "master-table-management/uraian-skala-usaha/{uraian_skala_usaha}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "uraian-skala-usaha.destroy": {
+    "name": "uraian-skala-usaha.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\UraianSkalaUsahaController@destroy",
+    "uri": "master-table-management/uraian-skala-usaha/{uraian_skala_usaha}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "profile.pengusaha.import": {
+    "name": "profile.pengusaha.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ProfilePengusahaController@import",
+    "uri": "data-table-management/profile-pengusaha/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "profile.pengusaha.export": {
+    "name": "profile.pengusaha.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ProfilePengusahaController@export",
+    "uri": "data-table-management/profile-pengusaha/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "profile-pengusaha.index": {
+    "name": "profile-pengusaha.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ProfilePengusahaController@index",
+    "uri": "data-table-management/profile-pengusaha",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "profile-pengusaha.create": {
+    "name": "profile-pengusaha.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ProfilePengusahaController@create",
+    "uri": "data-table-management/profile-pengusaha/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "profile-pengusaha.store": {
+    "name": "profile-pengusaha.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ProfilePengusahaController@store",
+    "uri": "data-table-management/profile-pengusaha",
+    "method": [
+      "POST"
+    ]
+  },
+  "profile-pengusaha.show": {
+    "name": "profile-pengusaha.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ProfilePengusahaController@show",
+    "uri": "data-table-management/profile-pengusaha/{profile_pengusaha}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "profile-pengusaha.edit": {
+    "name": "profile-pengusaha.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ProfilePengusahaController@edit",
+    "uri": "data-table-management/profile-pengusaha/{profile_pengusaha}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "profile-pengusaha.update": {
+    "name": "profile-pengusaha.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ProfilePengusahaController@update",
+    "uri": "data-table-management/profile-pengusaha/{profile_pengusaha}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "profile-pengusaha.destroy": {
+    "name": "profile-pengusaha.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\ProfilePengusahaController@destroy",
+    "uri": "data-table-management/profile-pengusaha/{profile_pengusaha}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "kelurahan.filter": {
+    "name": "kelurahan.filter",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\GeoLocationController@kelurahanFilters",
+    "uri": "data-table-management/kelurahan-filter",
+    "method": [
+      "POST"
+    ]
+  },
+  "kecamatan.filter": {
+    "name": "kecamatan.filter",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\PerusahaanController@kecamatanFilter",
+    "uri": "data-table-management/kecamatan-filter",
+    "method": [
+      "POST"
+    ]
+  },
+  "load.filter": {
+    "name": "load.filter",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@editLoadKelurahan",
+    "uri": "data-table-management/edit-kelurahan-filter",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "loadK.filter": {
+    "name": "loadK.filter",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\PerusahaanController@editLoadkecamatan",
+    "uri": "data-table-management/edit-kecamatan-filter",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "perusahaan.import": {
+    "name": "perusahaan.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\PerusahaanController@import",
+    "uri": "data-table-management/perusahaan/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "perusahaan.export": {
+    "name": "perusahaan.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\PerusahaanController@export",
+    "uri": "data-table-management/perusahaan/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "perusahaan.index": {
+    "name": "perusahaan.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\PerusahaanController@index",
+    "uri": "data-table-management/perusahaan",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "perusahaan.create": {
+    "name": "perusahaan.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\PerusahaanController@create",
+    "uri": "data-table-management/perusahaan/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "perusahaan.store": {
+    "name": "perusahaan.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\PerusahaanController@store",
+    "uri": "data-table-management/perusahaan",
+    "method": [
+      "POST"
+    ]
+  },
+  "perusahaan.show": {
+    "name": "perusahaan.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\PerusahaanController@show",
+    "uri": "data-table-management/perusahaan/{perusahaan}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "perusahaan.edit": {
+    "name": "perusahaan.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\PerusahaanController@edit",
+    "uri": "data-table-management/perusahaan/{perusahaan}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "perusahaan.update": {
+    "name": "perusahaan.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\PerusahaanController@update",
+    "uri": "data-table-management/perusahaan/{perusahaan}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "perusahaan.destroy": {
+    "name": "perusahaan.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\PerusahaanController@destroy",
+    "uri": "data-table-management/perusahaan/{perusahaan}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "kbli.filter": {
+    "name": "kbli.filter",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@kbliFilter",
+    "uri": "data-table-management/kbli-filter",
+    "method": [
+      "POST"
+    ]
+  },
+  "edit.filter": {
+    "name": "edit.filter",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@editFilter",
+    "uri": "data-table-management/edit-filter",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kbli.perusahaan.import": {
+    "name": "kbli.perusahaan.import",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@import",
+    "uri": "data-table-management/kbli-perusahaan/import",
+    "method": [
+      "POST"
+    ]
+  },
+  "kbli.perusahaan.export": {
+    "name": "kbli.perusahaan.export",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@export",
+    "uri": "data-table-management/kbli-perusahaan/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "set-selected-kbli-id": {
+    "name": "set-selected-kbli-id",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@setSelectedKbliId",
+    "uri": "data-table-management/set-selected-kbli-id",
+    "method": [
+      "POST"
+    ]
+  },
+  "clear-selected-kbli-id": {
+    "name": "clear-selected-kbli-id",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@clearSelectedKbliId",
+    "uri": "data-table-management/clear-selected-kbli-id",
+    "method": [
+      "POST"
+    ]
+  },
+  "kelurahanstore.filter": {
+    "name": "kelurahanstore.filter",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@kelurahanStoreFilter",
+    "uri": "data-table-management/kelurahanstore-filter",
+    "method": [
+      "POST"
+    ]
+  },
+  "page-1": {
+    "name": "page-1",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@submitForm",
+    "uri": "data-table-management/submit-form",
+    "method": [
+      "POST"
+    ]
+  },
+  "kbli-perusahaan.index": {
+    "name": "kbli-perusahaan.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@index",
+    "uri": "data-table-management/kbli-perusahaan",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kbli-perusahaan.create": {
+    "name": "kbli-perusahaan.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@create",
+    "uri": "data-table-management/kbli-perusahaan/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kbli-perusahaan.store": {
+    "name": "kbli-perusahaan.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@store",
+    "uri": "data-table-management/kbli-perusahaan",
+    "method": [
+      "POST"
+    ]
+  },
+  "kbli-perusahaan.show": {
+    "name": "kbli-perusahaan.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@show",
+    "uri": "data-table-management/kbli-perusahaan/{kbli_perusahaan}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kbli-perusahaan.edit": {
+    "name": "kbli-perusahaan.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@edit",
+    "uri": "data-table-management/kbli-perusahaan/{kbli_perusahaan}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "kbli-perusahaan.update": {
+    "name": "kbli-perusahaan.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@update",
+    "uri": "data-table-management/kbli-perusahaan/{kbli_perusahaan}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "kbli-perusahaan.destroy": {
+    "name": "kbli-perusahaan.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\KbliPerusahaanController@destroy",
+    "uri": "data-table-management/kbli-perusahaan/{kbli_perusahaan}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "geo-location.index": {
+    "name": "geo-location.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\GeoLocationController@index",
+    "uri": "data-table-management/geo-location",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "geo-location.create": {
+    "name": "geo-location.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\GeoLocationController@create",
+    "uri": "data-table-management/geo-location/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "geo-location.store": {
+    "name": "geo-location.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\GeoLocationController@store",
+    "uri": "data-table-management/geo-location",
+    "method": [
+      "POST"
+    ]
+  },
+  "geo-location.show": {
+    "name": "geo-location.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\GeoLocationController@show",
+    "uri": "data-table-management/geo-location/{geo_location}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "geo-location.edit": {
+    "name": "geo-location.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\GeoLocationController@edit",
+    "uri": "data-table-management/geo-location/{geo_location}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "geo-location.update": {
+    "name": "geo-location.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\GeoLocationController@update",
+    "uri": "data-table-management/geo-location/{geo_location}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "geo-location.destroy": {
+    "name": "geo-location.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\GeoLocationController@destroy",
+    "uri": "data-table-management/geo-location/{geo_location}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "kbliperusahaanfilter.filter": {
+    "name": "kbliperusahaanfilter.filter",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@kbliperusahaanfilter",
+    "uri": "penugasan-management/kbliperusahaanfilter-filter",
+    "method": [
+      "POST"
+    ]
+  },
+  "kbliperusahaanfiltered.filter": {
+    "name": "kbliperusahaanfiltered.filter",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@kbliperusahaanfiltered",
+    "uri": "penugasan-management/kbliperusahaanfiltered-filter",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "assign-approve.index": {
+    "name": "assign-approve.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@index",
+    "uri": "penugasan-management/assign-approve",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "assign-approve.create": {
+    "name": "assign-approve.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@create",
+    "uri": "penugasan-management/assign-approve/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "assign-approve.store": {
+    "name": "assign-approve.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@store",
+    "uri": "penugasan-management/assign-approve",
+    "method": [
+      "POST"
+    ]
+  },
+  "assign-approve.show": {
+    "name": "assign-approve.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@show",
+    "uri": "penugasan-management/assign-approve/{assign_approve}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "assign-approve.edit": {
+    "name": "assign-approve.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@edit",
+    "uri": "penugasan-management/assign-approve/{assign_approve}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "assign-approve.update": {
+    "name": "assign-approve.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@update",
+    "uri": "penugasan-management/assign-approve/{assign_approve}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "assign-approve.destroy": {
+    "name": "assign-approve.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@destroy",
+    "uri": "penugasan-management/assign-approve/{assign_approve}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "assign-approve.approve": {
+    "name": "assign-approve.approve",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@approve",
+    "uri": "penugasan-management/assign-approve/{id}/approve",
+    "method": [
+      "GET",
+      "POST",
+      "HEAD"
+    ]
+  },
+  "assign-approve.unapprove": {
+    "name": "assign-approve.unapprove",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@unapprove",
+    "uri": "penugasan-management/assign-approve/unapprove/{id}",
+    "method": [
+      "POST"
+    ]
+  },
+  "assign-approve.reject": {
+    "name": "assign-approve.reject",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\AssignApproveController@reject",
+    "uri": "penugasan-management/assign-approve/reject/{id}",
+    "method": [
+      "POST"
+    ]
+  }
+}

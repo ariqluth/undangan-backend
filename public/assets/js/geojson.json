@@ -1,0 +1,159 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "DONOROJO",
+                "alt_name": "Donorojo, Pacitan Regency, East Java, Indonesia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    110.93874,
+                    -8.14756
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "KEBONAGUNG",
+                "alt_name": "Kebonagung, Pacitan Regency, East Java, Indonesia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    111.17719,
+                    -8.21711
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "DONOROJO",
+                "alt_name": "Donorojo, Pacitan Regency, East Java, Indonesia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    110.93874,
+                    -8.14756
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "PUNUNG",
+                "alt_name": "Punung, Pacitan Regency, East Java, Indonesia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    111.03412,
+                    -8.12182
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "PRINGKUKU",
+                "alt_name": "Pringkuku, Pacitan Regency, East Java, Indonesia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    111.03412,
+                    -8.18366
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "PACITAN",
+                "alt_name": "Pacitan, Pacitan Sub-District, Pacitan Regency, East Java, Indonesia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    111.10565,
+                    -8.17978
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "KEBONAGUNG",
+                "alt_name": "Kebonagung, Pacitan Regency, East Java, Indonesia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    111.17719,
+                    -8.21711
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "TEGALOMBO",
+                "alt_name": "Tegalombo, Pacitan Regency, East Java, Indonesia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    111.29643,
+                    -8.0665
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "TULAKAN",
+                "alt_name": "Tulakan, Pacitan Regency, East Java, Indonesia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    111.26066,
+                    -8.18162
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SUDIMORO",
+                "alt_name": "Sudimoro, Pacitan Regency, East Java, Indonesia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    111.36797,
+                    -8.2272
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "GUNUNG TIMANG",
+                "alt_name": "Gn. Timang, Nglaran, Tulakan, Kabupaten Pacitan, Jawa Timur, Indonesia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    111.22778,
+                    -8.20972
+                ]
+            }
+        }
+    ]
+}
