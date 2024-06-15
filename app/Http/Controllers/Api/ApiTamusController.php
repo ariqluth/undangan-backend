@@ -3,35 +3,66 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreKbliPerusahaanRequest;
-use App\Http\Requests\UpdateKbliPerusahaanRequest;
-use App\Models\Kbli;
-use App\Models\KbliPerusahaan;
-use App\Models\Kecamatan;
-use App\Models\Kelurahan;
-use Illuminate\Support\Facades\Storage;
+use App\Models\Tamus;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\Http\Resources\KbliPerusahaanResource;
-use App\Http\Resources\KbliPerusahaanSearchResource;
-use App\Http\Resources\KbliSearchResource;
 
 class ApiTamusController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Request $request)
+    public function index()
     {
-       
+        $tamus = Tamus::all();
+        return response()->json($tamus);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'undangan_id' => 'required',
+            'nama_tamu' => 'required|string',
+            'email_tamu' => 'required|string',
+            'alamat_tamu' => 'required|string',
+            'nomer_tamu' => 'required|string',
+            'status' => 'required|string',
+            'kategori' => 'required|string',
+            'kodeqr' => 'required|string',
+        ]);
+
+        $tamus = Tamus::create($validatedData);
+        return response()->json($tamus, 201);
+    }
+
+ 
+    public function show($id)
+    {
+        $tamus = Tamus::findOrFail($id);
+        return response()->json($tamus);
+    }
+
+ 
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'undangan_id' => 'required',
+            'nama_tamu' => 'required|string',
+            'email_tamu' => 'required|string',
+            'alamat_tamu' => 'required|string',
+            'nomer_tamu' => 'required|string',
+            'status' => 'required|string',
+            'kategori' => 'required|string',
+            'kodeqr' => 'required|string',
+        ]);
+
+        $tamus = Tamus::findOrFail($id);
+        $tamus->update($validatedData);
+        return response()->json($tamus);
+    }
+
+   
+    public function destroy($id)
+    {
+        $tamus = Tamus::findOrFail($id);
+        $tamus->delete();
+        return response()->json(null, 204);
+    }
+
 }

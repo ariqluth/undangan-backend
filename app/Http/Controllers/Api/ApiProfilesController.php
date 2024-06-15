@@ -3,36 +3,59 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreKbliPerusahaanRequest;
-use App\Http\Requests\UpdateKbliPerusahaanRequest;
-use App\Http\Resources\MapResource;
-use App\Models\Kbli;
-use App\Models\KbliPerusahaan;
-use App\Models\Kecamatan;
-use App\Models\Kelurahan;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\Http\Resources\VisitorMapResource;
-use App\Models\Perusahaan;
-use Illuminate\Database\QueryException;
+use App\Models\Profiles;
 
 class ApiProfilesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-       
+        $items = Profiles::all();
+        return response()->json($items);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'user_id' => 'required',
+            'username' => 'required|string',
+            'nomer_telepon' => 'required|string',
+            'alamat' => 'required|string',
+            'gambar' => 'required|string',
+        ]);
+
+        $item = Profiles::create($validatedData);
+        return response()->json($item, 201);
+    }
+
+ 
+    public function show($id)
+    {
+        $item = Profiles::findOrFail($id);
+        return response()->json($item);
+    }
+
+ 
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'user_id' => 'required',
+            'username' => 'required|string',
+            'nomer_telepon' => 'required|string',
+            'alamat' => 'required|string',
+            'gambar' => 'required|string',
+        ]);
+
+        $item = Profiles::findOrFail($id);
+        $item->update($validatedData);
+        return response()->json($item);
+    }
+
+   
+    public function destroy($id)
+    {
+        $item = Profiles::findOrFail($id);
+        $item->delete();
+        return response()->json(null, 204);
+    }
 
 }

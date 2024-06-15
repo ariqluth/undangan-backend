@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('id')->restrictOnDelete();
+            $table->foreign('user_id')->references('id')->on('users')->restrictOnDelete();
             $table->string('username');
             $table->string('nomer_telepon');
             $table->string('alamat');

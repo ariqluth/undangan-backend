@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('order_id')->nullable();
             $table->unsignedBigInteger('order_list_id')->nullable();
             $table->foreign('order_id')->references('id')->on('orders')->restrictOnDelete();
-            $table->foreign('order_list_id')->references('id')->on('order_lists')->restrictOnDelete();
+            $table->foreign('order_list_id')->references('id')->on('order_list')->restrictOnDelete();
             $table->string('nama_pengantin_pria');
             $table->string('nama_pengantin_wanita');
             $table->string('tanggal_pernikahan');

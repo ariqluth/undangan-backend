@@ -17,14 +17,14 @@ class ItemsSeeder extends Seeder
     {
         $itemsData = [
             [
-                'profile_id' => '1',
+                'user_id' => '1',
                 'nama_item' => 'Undangan Items 1',
                 'gambar' => 'items1.png',
               
             ],
 
             [
-                'profile_id' => '2',
+                'user_id' => '1',
                 'nama_item' => 'Undangan Items 2',
                 'gambar' => 'items2.png',
               

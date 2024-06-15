@@ -14,10 +14,17 @@ use App\Http\Controllers\Api\ApiMapController;
 use App\Http\Controllers\Api\ApiPopUpController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\ApiChartDataController;
+use App\Http\Controllers\Api\ApiItemsController;
 use App\Http\Controllers\Api\ApiKbliPerusahaanSearchController;
 use App\Http\Controllers\Api\ApiKbliSearchController;
+use App\Http\Controllers\Api\ApiOrderListController;
+use App\Http\Controllers\Api\ApiOrdersController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ApiProfilePengusahaController;
+use App\Http\Controllers\Api\ApiProfilesController;
+use App\Http\Controllers\Api\ApiTamusController;
+use App\Http\Controllers\Api\ApiUndangansController;
+use App\Http\Controllers\Api\ApiVerifyOrderController;
 use App\Http\Controllers\ApiAssignApproveController;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -35,16 +42,7 @@ use Illuminate\Validation\ValidationException;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::apiResource('kelurahan', ApiKelurahanController::class, ['as' => 'api'])->except(['destroy']);
-Route::apiResource('kecamatan', ApiKecamatanController::class, ['as' => 'api'])->except(['destroy']);
-Route::apiResource('perusahaan', ApiPerusahaanController::class, ['as' => 'api'])->except(['destroy']);
-Route::apiResource('visitormap', ApiVisitorController::class, ['as' => 'api']);
-Route::apiResource('kblisearch', ApiKbliSearchController::class, ['as' => 'api']);
-Route::apiResource('popup', ApiPopUpController::class, ['as' => 'api']);
-Route::get('popup/{id}', [ApiPopUpController::class, 'showPopup'], ['as' => 'api'])->name('api.popup.showPopup');
-Route::apiResource('map', ApiMapController::class, ['as' => 'api']);
-Route::apiResource('kbliperusahaansearch', ApiKbliPerusahaanSearchController::class, ['as' => 'api']);
-Route::apiResource('chartdata', ApiChartDataController::class, ['as' => 'api']);
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -58,28 +56,19 @@ Route::post('/forgot-password', [AuthController::class, 'forgot_password']);
 Route::group(
     ['middleware' => 'auth:sanctum'],
     function () {
+        Route::get('/auth/token', function () {
+            $token = auth()->user()->createToken('authToken')->plainTextToken;
+            return response()->json(['token' => $token]);
+        });
         Route::post('/auth/logout', [AuthController::class, 'logout']);
         Route::post('/reset-password', [AuthController::class, 'change_password']);
-        Route::post('/edit-profile', [AuthController::class, 'editProfile']);
+        Route::apiResource('profile', ApiProfilesController::class, ['as' => 'api']);
+        Route::apiResource('item', ApiItemsController::class, ['as' => 'api']);
+        Route::apiResource('order', ApiOrdersController::class, ['as' => 'api']);
+        Route::apiResource('verify-order', ApiVerifyOrderController::class, ['as' => 'api']);
+        Route::apiResource('order-list', ApiOrderListController::class, ['as' => 'api']);
+        Route::apiResource('undangan', ApiUndangansController::class, ['as' => 'api']);
+        Route::apiResource('tamu', ApiTamusController::class, ['as' => 'api']);
 
-        //master table
-        Route::apiResource('kabupaten', ApiKabupatenController::class, ['as' => 'api'])->except(['destroy']);
-
-        Route::apiResource('kbli-perusahaan', ApiKbliPerusahaanController::class, ['as' => 'api']);
-
-        Route::apiResource('kbli', ApiKBliController::class, ['as' => 'api'])->except(['destroy']);
-        Route::apiResource('uraian-jenis-perusahaan', ApiUraianJenisPerusahaanController::class, ['as' => 'api'])->except(['destroy']);
-        Route::apiResource('uraian-resiko-proyek', ApiUraianResikoProyekController::class, ['as' => 'api'])->except(['destroy']);
-        Route::apiResource('uraian-skala-usaha', ApiUraianSkalaUsahaController::class, ['as' => 'api'])->except(['destroy']);
-        Route::apiResource('profile-pengusaha', ApiProfilePengusahaController::class, ['as' => 'api'])->except(['destroy']);
-
-        //data table
-        Route::apiResource('/category', CategoryController::class);
-
-        Route::apiResource('assign-approve', ApiAssignApproveController::class, ['as' => 'api']);
-        // Route::put('assign-approve/{assign_approve}', [ApiAssignApproveController::class, 'update'], ['as' => 'api']);
-        Route::get('assign-approve/get-assign/{user_id}', [ApiAssignApproveController::class, 'getAssignApproveByUser'], ['as' => 'api'])->name('api.assign.approve.getAssignApproveByUser');
-        Route::get('assign-approve/list-wait-assign/{user_id}', [ApiAssignApproveController::class, 'getListWaitApproveByUser'], ['as' => 'api'])->name('api.assign.approve.getListWaitApproveByUser');
-        Route::PUT('/assign-approve/{assignApprove}/upload-foto', [ApiAssignApproveController::class, 'uploadFoto']);
     }
 );

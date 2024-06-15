@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('order_id')->nullable();
             $table->unsignedBigInteger('verify_order_id')->nullable();
             $table->foreign('order_id')->references('id')->on('orders')->restrictOnDelete();
-            $table->foreign('verify_order_id')->references('id')->on('verify_orders')->restrictOnDelete();
+            $table->foreign('verify_order_id')->references('id')->on('verify_order')->restrictOnDelete();
             $table->enum('type', ['selesai', 'proses', 'revisi']);
             $table->string('kode');
             $table->timestamps();

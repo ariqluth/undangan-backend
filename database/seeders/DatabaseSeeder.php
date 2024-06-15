@@ -3,6 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\KategoriArtikel;
+use App\Models\OrderList;
+use App\Models\Orders;
+use App\Models\Tamus;
+use App\Models\VerifyOrder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,22 +19,13 @@ class DatabaseSeeder extends Seeder
             RoleAndPermissionSeeder::class,
             MenuGroupSeeder::class,
             MenuItemSeeder::class,
-            KabupatenSeeder::class,
-            KecamatanSeeder::class,
-            KelurahanSeeder::class,
-            ProfilePengusahaSeeder::class,
-            KBLISeeder::class,
-            PenanamanModalSeeder::class,
-            UraianJenisPerusahaanSeeder::class,
-            UraianResikoProyekSeeder::class,
-            UraianSkalaUsahaSeeder::class,
-            PerusahaanSeeder::class,
-            KbliPerusahaanSeeder::class,
-            AssignApproveSeeder::class,
-            KategoriArtikelSeeder::class,
-            // GambarKbliPerusahaanSeeder::class,
-            ArtikelSeeder::class,
-            ArtikelKategoriJoinSeeder::class,
+            ProfilesSeeder::class,
+            ItemsSeeder::class,
+            Orders::class,
+            VerifyOrderSeeder::class,
+            OrderList::class,
+            UndangansSeeder::class,
+            Tamus::class
         ]);
     }
 }

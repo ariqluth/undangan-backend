@@ -21,39 +21,56 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        $request->validate([
+        $rules = [
             'email' => 'required|email',
             'password' => 'required',
-        ]);
+        ];
 
-        $user = User::where('email', $request->email)->first();
+        $customMessages = [
+            'required' => 'Kolom :attribute tidak boleh kosong.',
+            'email' => 'Format email tidak valid.',
+        ];
 
-        if (!$user || !Hash::check($request->password, $user->password)) {
-            throw ValidationException::withMessages([
-                'email' => ['The provided credentials are incorrect.'],
-            ]);
+        try {
+            $validator = Validator::make($request->all(), $rules, $customMessages);
+
+            if ($validator->fails()) {
+                $errorMessages = [];
+                foreach ($validator->errors()->messages() as $field => $messages) {
+                    $errorMessages[] = "$field : " . implode(', ', $messages);
+                }
+                throw ValidationException::withMessages(['message' => $errorMessages]);
+            }
+
+            $credentials = $request->only('email', 'password');
+            if (Auth::attempt($credentials)) {
+                $user = Auth::user();
+                $roleName = Auth::user()->getRoleNames();
+                $token = $user->createToken('')->plainTextToken;
+                Log::addLog(getUserId(), 'login', 'mencoba login', 'Web Surveyor', $user);
+
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Berhasil masuk.',
+                    'data' => [
+                        'token' => $token,
+                        'id' => $user->id,
+                        'role' => $roleName
+                    ]
+                ], Response::HTTP_OK);
+            }
+
+            $errorMessages = ['Akun Tidak Terdaftar'];
+            throw ValidationException::withMessages(['message' => $errorMessages]);
+        } catch (ValidationException $e) {
+            $errorResponse = [
+                'success' => false,
+                'message' => $e->errors(),
+            ];
+            return response()->json($errorResponse, Response::HTTP_BAD_REQUEST);
         }
-
-        if (!$user->email_verified_at) {
-            throw ValidationException::withMessages([
-                'email' => ['Your email address has not been verified.'],
-            ]);
-        }
-
-        $roles = $user->getRoleNames();
-        if (!$roles->contains('mobile')) {
-            throw ValidationException::withMessages([
-                'email' => ['You do not have the required role to log in.'],
-            ]);
-        }
-
-        $token = $user->createToken($request->email)->plainTextToken;
-
-        return new LoginResource([
-            'token' => $token,
-            'user' => $user
-        ]);
     }
+
 
 
     public function register(Request $request)
@@ -61,34 +78,42 @@ class AuthController extends Controller
         $request->validate([
             'name' => 'required|string',
             'email' => 'required|string|email|unique:users',
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:8', 'confirmed', Password::defaults()],
             'device_name' => 'required',
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password), // set email_verified_at field to current date/time
+            'password' => Hash::make($request->password),
         ]);
-
-        $user->assignRole('mobile');
-
-        $token = $user->createToken($request->device_name)->plainTextToken;
-        return new LoginResource([
-            'token' => $token,
-            'user' => $user
-        ]);
+        // Log::addLog('register', 'operator ' . $user->name . ' sedang melakukan pendaftaran ke dalam sistem', null, $request);
+        return response()->json(
+            [
+                'token' => $user->createToken($request->device_name)->plainTextToken,
+            ],
+            200
+        );
     }
+
 
 
     public function logout(Request $request)
     {
-        // auth()->user()->tokens()->delete();
-        // return response()->noContent();
-        //hapus semua tuken by user
-        $request->user()->tokens()->delete();
-        //response no content
-        return response()->noContent();
+        try {
+            Log::addLog(getUserId(), 'logout', 'mencoba logout', 'Web Surveyor', $request->all());
+
+            auth()->user()->tokens()->delete();
+            return response()->json([
+                "success" => true,
+                'message' => 'Berhasil keluar.'
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                "success" => false,
+                'message' => 'Gagal keluar. Silakan coba lagi.'
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
     }
 
 
