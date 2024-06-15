@@ -77,94 +77,7 @@ class RoleAndPermissionSeeder extends Seeder
         Permission::create(['name' => 'menu-item.edit']);
         Permission::create(['name' => 'menu-item.destroy']);
 
-        //kabupaten
-        Permission::create(['name' => 'kabupaten.index']);
-        Permission::create(['name' => 'kabupaten.create']);
-        Permission::create(['name' => 'kabupaten.edit']);
-        Permission::create(['name' => 'kabupaten.destroy']);
-
-        //kecamatan
-        Permission::create(['name' => 'kecamatan.index']);
-        Permission::create(['name' => 'kecamatan.create']);
-        Permission::create(['name' => 'kecamatan.edit']);
-        Permission::create(['name' => 'kecamatan.destroy']);
-
-        //kelurahan
-        Permission::create(['name' => 'kelurahan.index']);
-        Permission::create(['name' => 'kelurahan.create']);
-        Permission::create(['name' => 'kelurahan.edit']);
-        Permission::create(['name' => 'kelurahan.destroy']);
-
-        //kbli
-        Permission::create(['name' => 'kbli.index']);
-        Permission::create(['name' => 'kbli.create']);
-        Permission::create(['name' => 'kbli.edit']);
-        Permission::create(['name' => 'kbli.destroy']);
-
-        //Artikel
-        Permission::create(['name' => 'artikel.index']);
-        Permission::create(['name' => 'artikel.create']);
-        Permission::create(['name' => 'artikel.edit']);
-        Permission::create(['name' => 'artikel.destroy']);
-
-        //Kategori Artikel
-        Permission::create(['name' => 'kategori-artikel.index']);
-        Permission::create(['name' => 'kategori-artikel.create']);
-        Permission::create(['name' => 'kategori-artikel.edit']);
-        Permission::create(['name' => 'kategori-artikel.destroy']);
-
-
-        //uraian-jenis-perusahaan
-        Permission::create(['name' => 'uraian-jenis-perusahaan.index']);
-        Permission::create(['name' => 'uraian-jenis-perusahaan.create']);
-        Permission::create(['name' => 'uraian-jenis-perusahaan.edit']);
-        Permission::create(['name' => 'uraian-jenis-perusahaan.destroy']);
-
-        //uraian-resiko-proyek
-        Permission::create(['name' => 'uraian-resiko-proyek.index']);
-        Permission::create(['name' => 'uraian-resiko-proyek.create']);
-        Permission::create(['name' => 'uraian-resiko-proyek.edit']);
-        Permission::create(['name' => 'uraian-resiko-proyek.destroy']);
-
-        //uraian-skala-usaha
-        Permission::create(['name' => 'uraian-skala-usaha.index']);
-        Permission::create(['name' => 'uraian-skala-usaha.create']);
-        Permission::create(['name' => 'uraian-skala-usaha.edit']);
-        Permission::create(['name' => 'uraian-skala-usaha.destroy']);
-
-        //profile-pengusaha
-        Permission::create(['name' => 'profile-pengusaha.index']);
-        Permission::create(['name' => 'profile-pengusaha.create']);
-        Permission::create(['name' => 'profile-pengusaha.edit']);
-        Permission::create(['name' => 'profile-pengusaha.destroy']);
-
-        //perusahaan
-        Permission::create(['name' => 'perusahaan.index']);
-        Permission::create(['name' => 'perusahaan.create']);
-        Permission::create(['name' => 'perusahaan.edit']);
-        Permission::create(['name' => 'perusahaan.destroy']);
-
-
-        //kbli-perusaaan
-        Permission::create(['name' => 'kbli-perusahaan.index']);
-        Permission::create(['name' => 'kbli-perusahaan.create']);
-        Permission::create(['name' => 'kbli-perusahaan.edit']);
-        Permission::create(['name' => 'kbli-perusahaan.destroy']);
-
-        //geo-location
-        Permission::create(['name' => 'geo-location.index']);
-        Permission::create(['name' => 'geo-location.create']);
-        Permission::create(['name' => 'geo-location.edit']);
-        Permission::create(['name' => 'geo-location.destroy']);
-
-        //assign-task
-        Permission::create(['name' => 'assign-approve.index']);
-        Permission::create(['name' => 'assign-approve.create']);
-        Permission::create(['name' => 'assign-approve.edit']);
-        Permission::create(['name' => 'assign-approve.destroy']);
-
-        Permission::create(['name' => 'keamanan.kbliperusahaan-index']);
-        Permission::create(['name' => 'keamanan.assignapprove-index']);
+       
         // // foto-kbli-perusahaan
         // Permission::create(['name' => 'foto-kbli-perusahaan.index']);
         // Permission::create(['name' => 'foto-kbli-perusahaan.create']);
@@ -174,7 +87,7 @@ class RoleAndPermissionSeeder extends Seeder
         // create roles
         $roleUser = Role::create(['name' => 'customer']);
         $roleUser->givePermissionTo([
-            'visitor.index',
+            'dashboard',
         ]);
 
         // create Super Admin
@@ -184,66 +97,6 @@ class RoleAndPermissionSeeder extends Seeder
         $roleAdmin->givePermissionTo([
             'dashboard',
             'master-table.management',
-            'kabupaten.index',
-            'kabupaten.create',
-            'kabupaten.edit',
-            'kabupaten.destroy',
-            'kecamatan.index',
-            'kecamatan.create',
-            'kecamatan.edit',
-            'kecamatan.destroy',
-            'kelurahan.index',
-            'kelurahan.create',
-            'kelurahan.edit',
-            'kelurahan.destroy',
-            'kbli.index',
-            'kbli.create',
-            'kbli.edit',
-            'kbli.destroy',
-            'uraian-jenis-perusahaan.index',
-            'uraian-jenis-perusahaan.create',
-            'uraian-jenis-perusahaan.edit',
-            'uraian-jenis-perusahaan.destroy',
-            'uraian-resiko-proyek.index',
-            'uraian-resiko-proyek.create',
-            'uraian-resiko-proyek.edit',
-            'uraian-resiko-proyek.destroy',
-            'uraian-skala-usaha.index',
-            'uraian-skala-usaha.create',
-            'uraian-skala-usaha.edit',
-            'uraian-skala-usaha.destroy',
-            'data-table.management',
-            'profile-pengusaha.index',
-            'profile-pengusaha.create',
-            'profile-pengusaha.edit',
-            'profile-pengusaha.destroy',
-            'perusahaan.index',
-            'perusahaan.create',
-            'perusahaan.edit',
-            'perusahaan.destroy',
-            'kbli-perusahaan.index',
-            'kbli-perusahaan.create',
-            'kbli-perusahaan.edit',
-            'kbli-perusahaan.destroy',
-            'geo-location.index',
-            'geo-location.create',
-            'geo-location.edit',
-            'geo-location.destroy',
-            'assign-approve.index',
-            'assign-approve.create',
-            'assign-approve.edit',
-            'assign-approve.destroy',
-            'penugasan.management',
-            'artikel.management',
-            'kategori-artikel.index',
-            'kategori-artikel.create',
-            'kategori-artikel.edit',
-            'kategori-artikel.destroy',
-            'artikel.index',
-            'artikel.create',
-            'artikel.edit',
-            'artikel.destroy',
-            'visitor.index',
         ]);
        
 

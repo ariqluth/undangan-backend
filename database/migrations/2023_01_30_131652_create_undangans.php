@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('nama_pengantin_wanita');
             $table->string('tanggal_pernikahan');
             $table->string('lokasi_pernikahan');
+            $table->string('longitude');
+            $table->string('latitude');
             $table->timestamps();
         });
     }
@@ -34,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jenis_legalitas');
+        Schema::dropIfExists('undangans');
     }
 };

@@ -34,12 +34,6 @@ class UserSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
       
-        User::create([
-            'name' => "mobile",
-            'email' => "mobile@gmail.com",
-            'password' => Hash::make('@password'),
-            'email_verified_at' => now(),
-        ]);
       
     }
 }

@@ -25,6 +25,7 @@ class ApiTamusController extends Controller
             'status' => 'required|string',
             'kategori' => 'required|string',
             'kodeqr' => 'required|string',
+            'tipe_undangan' => 'required|string',
         ]);
 
         $tamus = Tamus::create($validatedData);
@@ -50,6 +51,7 @@ class ApiTamusController extends Controller
             'status' => 'required|string',
             'kategori' => 'required|string',
             'kodeqr' => 'required|string',
+            'tipe_undangan' => 'required|string',
         ]);
 
         $tamus = Tamus::findOrFail($id);

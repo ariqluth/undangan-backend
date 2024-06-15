@@ -22,6 +22,8 @@ class ApiUndangansController extends Controller
             'nama_pengantin_wanita' => 'required|string',
             'tanggal_pernikahan' => 'required|string',
             'lokasi_pernikahan' => 'required|string',
+            'longitude' => 'required|string',
+            'latitude' => 'required|string',
           
         ]);
 
@@ -46,6 +48,8 @@ class ApiUndangansController extends Controller
             'nama_pengantin_wanita' => 'required|string',
             'tanggal_pernikahan' => 'required|string',
             'lokasi_pernikahan' => 'required|string',
+            'longitude' => 'required|string',
+            'latitude' => 'required|string'
         ]);
 
         $undangans = Undangans::findOrFail($id);

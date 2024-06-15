@@ -2,11 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\KategoriArtikel;
-use App\Models\OrderList;
-use App\Models\Orders;
-use App\Models\Tamus;
-use App\Models\VerifyOrder;
+
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,11 +17,11 @@ class DatabaseSeeder extends Seeder
             MenuItemSeeder::class,
             ProfilesSeeder::class,
             ItemsSeeder::class,
-            Orders::class,
+            OrdersSeeder::class,
             VerifyOrderSeeder::class,
-            OrderList::class,
+            OrderListSeeder::class,
             UndangansSeeder::class,
-            Tamus::class
+            TamusSeeder::class
         ]);
     }
 }

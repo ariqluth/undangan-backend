@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Items;
 use Illuminate\Database\Seeder;
-use App\Models\Artikel;
-use Illuminate\Support\Facades\Storage;
+
 
 class ItemsSeeder extends Seeder
 {
@@ -33,7 +33,7 @@ class ItemsSeeder extends Seeder
         ];
 
         foreach ($itemsData as $data) {
-            $filename = basename($data['path']);
+            $filename = basename($data['gambar']);
 
             $imageSourcePath = public_path('assets/img/items/' . $filename);
             $imageDestPath = storage_path('app/public/assets/img/items/' . $filename);
@@ -50,7 +50,7 @@ class ItemsSeeder extends Seeder
                     unlink($imageSourcePath);
                 }
 
-                $data['path'] = 'storage/assets/img/items/' . $filename;
+                $data['gambar'] = 'storage/assets/img/items/' . $filename;
             }
 
             Items::insert($data);

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->enum('status', ['datang', 'belum datang']);
             $table->enum('kategori', ['family', 'teman']);
             $table->string('kodeqr');
+            $table->enum('tipe_undangan', ['digital', 'fisik']);
             $table->timestamps();
         });
     }
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profile_pengusaha');
+        Schema::dropIfExists('tamus');
     }
 };

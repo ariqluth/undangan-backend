@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Tamus;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 use Illuminate\Database\Seeder;
 
 class TamusSeeder extends Seeder
@@ -20,6 +20,7 @@ class TamusSeeder extends Seeder
                 'status' => 'belum datang',
                 'kategori' => 'teman',
                 'kodeqr' => 'ariqluthfi-01',
+                'tipe_undangan' => 'digital',
             ],
           
             

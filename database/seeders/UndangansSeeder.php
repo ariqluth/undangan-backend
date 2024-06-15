@@ -3,8 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Undangans;
-use App\Models\UraianSkalaUsaha;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class UndangansSeeder extends Seeder
@@ -25,6 +23,8 @@ class UndangansSeeder extends Seeder
                     'nama_pengantin_wanita' => 'Kosibo',
                     'tanggal_pernikahan' => '2024-12-04',
                     'lokasi_pernikahan' => 'Nganjuk',
+                    'longitude' => '-7.6309423',
+                    'latitude' => '112.0173182',
                 ],
                 
             ]
