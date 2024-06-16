@@ -3,19 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\LoginRequest;
-use App\Http\Requests\RegisterRequest;
 use App\Http\Resources\LoginResource;
-use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Validation\ValidationException;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
@@ -46,8 +42,9 @@ class AuthController extends Controller
             if (Auth::attempt($credentials)) {
                 $user = Auth::user();
                 $roleName = Auth::user()->getRoleNames();
+                
                 $token = $user->createToken('')->plainTextToken;
-                Log::addLog(getUserId(), 'login', 'mencoba login', 'Web Surveyor', $user);
+                Log::info('User logged in', ['user_id' => Auth::id(), 'user' => $user]);
 
                 return response()->json([
                     'success' => true,
@@ -57,7 +54,7 @@ class AuthController extends Controller
                         'id' => $user->id,
                         'role' => $roleName
                     ]
-                ], Response::HTTP_OK);
+                ], 200);
             }
 
             $errorMessages = ['Akun Tidak Terdaftar'];
@@ -67,43 +64,53 @@ class AuthController extends Controller
                 'success' => false,
                 'message' => $e->errors(),
             ];
-            return response()->json($errorResponse, Response::HTTP_BAD_REQUEST);
+            return response()->json($errorResponse, 400);
         }
     }
-
-
 
     public function register(Request $request)
     {
         $request->validate([
             'name' => 'required|string',
             'email' => 'required|string|email|unique:users',
-            'password' => ['required', 'string', 'min:8', 'confirmed', Password::defaults()],
-            'device_name' => 'required',
+            'password' => 'required|string|min:8|confirmed',
+            'device' => 'required',
+            'role' => 'required|string|in:customer,employee',
         ]);
-
+    
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        // Log::addLog('register', 'operator ' . $user->name . ' sedang melakukan pendaftaran ke dalam sistem', null, $request);
+    
+        $user->assignRole($request->role);
+    
+        $token = $user->createToken($request->device)->plainTextToken;
         return response()->json(
             [
-                'token' => $user->createToken($request->device_name)->plainTextToken,
+                'token' => $token,
+                'user' => $user
             ],
             200
         );
     }
-
-
+    
 
     public function logout(Request $request)
     {
         try {
-            Log::addLog(getUserId(), 'logout', 'mencoba logout', 'Web Surveyor', $request->all());
+            $user = Auth::user();
+            if (!$user) {
+                return response()->json([
+                    "success" => false,
+                    'message' => 'Unauthenticated or Token Expired'
+                ], 401);
+            }
 
-            auth()->user()->tokens()->delete();
+            Log::info('User logged out', ['user_id' => $user->id, 'request' => $request->all()]);
+
+            $user->tokens()->delete();
             return response()->json([
                 "success" => true,
                 'message' => 'Berhasil keluar.'
@@ -112,10 +119,9 @@ class AuthController extends Controller
             return response()->json([
                 "success" => false,
                 'message' => 'Gagal keluar. Silakan coba lagi.'
-            ], Response::HTTP_INTERNAL_SERVER_ERROR);
+            ], 500);
         }
     }
-
 
     public function forgot_password(Request $request)
     {

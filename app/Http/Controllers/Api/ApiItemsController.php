@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Items;
+use Illuminate\Http\Request; 
 
 class ApiItemsController extends Controller
 {
@@ -14,14 +15,21 @@ class ApiItemsController extends Controller
          return response()->json($items);
      }
  
-     public function store(Request $request)
+     public function store(Request $request) 
      {
          $validatedData = $request->validate([
              'user_id' => 'required',
-             'gambar' => 'nullable|string',
-             'nama_item' => 'nullable|string',
-     
+             'gambar' => 'required|file|mimes:jpg,jpeg,png', 
+             'nama_item' => 'required|string',
          ]);
+ 
+         if ($request->hasFile('gambar')) {
+             $file = $request->file('gambar');
+             $filename = time() . '_' . $file->getClientOriginalName();
+             $filePath = 'assets/img/items/' . $filename;
+             $file->move(public_path('assets/img/items'), $filename);
+             $validatedData['gambar'] = $filePath;
+         }
  
          $item = Items::create($validatedData);
          return response()->json($item, 201);
@@ -39,14 +47,26 @@ class ApiItemsController extends Controller
      {
          $validatedData = $request->validate([
              'user_id' => 'required',
-             'gambar' => 'nullable|string',
+             'gambar' => 'nullable|file|mimes:jpg,jpeg,png',
              'nama_item' => 'nullable|string',
             
          ]);
  
          $item = Items::findOrFail($id);
-         $item->update($validatedData);
-         return response()->json($item);
+         if ($request->hasFile('gambar')) {
+            if ($item->gambar && file_exists(public_path($item->gambar))) {
+                unlink(public_path($item->gambar));
+            }
+
+            $file = $request->file('gambar');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $filePath = 'assets/img/items/' . $filename;
+            $file->move(public_path('assets/img/items'), $filename);
+            $validatedData['gambar'] = $filePath;
+        }
+
+        $item->update($validatedData);
+        return response()->json($item);
      }
  
     

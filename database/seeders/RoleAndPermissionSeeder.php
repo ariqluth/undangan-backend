@@ -85,10 +85,7 @@ class RoleAndPermissionSeeder extends Seeder
         // Permission::create(['name' => 'foto-kbli-perusahaan.destroy']);
 
         // create roles
-        $roleUser = Role::create(['name' => 'customer']);
-        $roleUser->givePermissionTo([
-            'dashboard',
-        ]);
+   
 
         // create Super Admin
         $role = Role::create(['name' => 'super-admin']);
@@ -99,7 +96,10 @@ class RoleAndPermissionSeeder extends Seeder
             'master-table.management',
         ]);
        
-
+        $roleUser = Role::create(['name' => 'customer']);
+        $roleUser->givePermissionTo([
+            'dashboard',
+        ]);
 
 
         //assign user id 1 ke super admin

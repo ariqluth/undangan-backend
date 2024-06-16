@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Profiles;
+use Illuminate\Http\Request;
 
 class ApiProfilesController extends Controller
 {
@@ -20,7 +21,7 @@ class ApiProfilesController extends Controller
             'username' => 'required|string',
             'nomer_telepon' => 'required|string',
             'alamat' => 'required|string',
-            'gambar' => 'required|string',
+            'gambar' => 'nullable|string',
         ]);
 
         $item = Profiles::create($validatedData);
@@ -42,7 +43,7 @@ class ApiProfilesController extends Controller
             'username' => 'required|string',
             'nomer_telepon' => 'required|string',
             'alamat' => 'required|string',
-            'gambar' => 'required|string',
+            'gambar' => 'nullable|string',
         ]);
 
         $item = Profiles::findOrFail($id);

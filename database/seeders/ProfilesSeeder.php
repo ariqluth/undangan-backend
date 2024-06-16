@@ -22,12 +22,7 @@ class ProfilesSeeder extends Seeder
                 'nomer_telepon'=> '082151234567912',
                 'alamat'=> 'Malang',
             ],
-            [
-                'user_id' => '2',
-                'username'=> 'tirta',
-                'nomer_telepon'=> '082151234567913',
-                'alamat'=> 'Nganjuk',
-            ],
+           
             [
                 'user_id' => '3',
                 'username'=> 'batara',

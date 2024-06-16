@@ -24,7 +24,7 @@ class OrdersSeeder extends Seeder
                 'status'=> 'pending',
             ],
             [
-                'profile_id' => '3',
+                'profile_id' => '1',
                 'item_id'=> '2',
                 'kode'=> 'G102',
                 'tanggal_terakhir'=> '2024-05-12',
