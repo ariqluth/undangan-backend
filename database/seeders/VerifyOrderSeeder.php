@@ -9,11 +9,6 @@ use Illuminate\Database\Seeder;
 
 class VerifyOrderSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
         VerifyOrder::insert(

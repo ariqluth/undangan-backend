@@ -76,16 +76,7 @@ class RoleAndPermissionSeeder extends Seeder
         Permission::create(['name' => 'menu-item.create']);
         Permission::create(['name' => 'menu-item.edit']);
         Permission::create(['name' => 'menu-item.destroy']);
-
-       
-        // // foto-kbli-perusahaan
-        // Permission::create(['name' => 'foto-kbli-perusahaan.index']);
-        // Permission::create(['name' => 'foto-kbli-perusahaan.create']);
-        // Permission::create(['name' => 'foto-kbli-perusahaan.edit']);
-        // Permission::create(['name' => 'foto-kbli-perusahaan.destroy']);
-
         // create roles
-   
 
         // create Super Admin
         $role = Role::create(['name' => 'super-admin']);
@@ -100,7 +91,6 @@ class RoleAndPermissionSeeder extends Seeder
         $roleUser->givePermissionTo([
             'dashboard',
         ]);
-
 
         //assign user id 1 ke super admin
         $user = User::find(1);

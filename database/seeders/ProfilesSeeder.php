@@ -7,14 +7,8 @@ use Illuminate\Database\Seeder;
 
 class ProfilesSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
-        //
         Profiles::insert ([
             [
                 'user_id' => '2',
@@ -22,7 +16,6 @@ class ProfilesSeeder extends Seeder
                 'nomer_telepon'=> '082151234567912',
                 'alamat'=> 'Malang',
             ],
-           
             [
                 'user_id' => '3',
                 'username'=> 'batara',

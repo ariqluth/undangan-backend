@@ -21,8 +21,7 @@ class TamusSeeder extends Seeder
                 'kategori' => 'teman',
                 'kodeqr' => 'ariqluthfi-01',
                 'tipe_undangan' => 'digital',
-            ],
-          
+            ], 
             
         ]);
     }
