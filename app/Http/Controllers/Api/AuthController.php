@@ -52,7 +52,9 @@ class AuthController extends Controller
                     'data' => [
                         'token' => $token,
                         'id' => $user->id,
-                        'role' => $roleName
+                        'role' => $roleName,
+                        'email_verified_at' => $user->email_verified_at,
+                       
                     ]
                 ], 200);
             }
