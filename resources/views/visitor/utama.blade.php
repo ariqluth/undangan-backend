@@ -3,7 +3,7 @@
 @section('contentvisitor')
     <section class="section">
         <div class="section-header">
-            <h1>Hallo Selamat Datang PUSBAKOR</h1>
+            <h1>Hallo Selamat Datang PUSBAKOR aokwokwaokawoawkoawk</h1>
         </div>
         <div class="card card-primary">
             <div class="card">

@@ -2,7 +2,7 @@ name: Auto Deploy
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   deploy:
@@ -15,8 +15,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
           script: |
-            cd /var/www/pkm-pacitan/
-            git pull
-            composer install --no-interaction --prefer-dist --optimize-autoloader
-            php artisan migrate:fresh --seed
-            php artisan optimize
+            cd /var/www/undangan-backend/
+            sudo git pull
+            sudo composer install --no-interaction --prefer-dist --optimize-autoloader
+            sudo php artisan migrate:fresh --seed
+            sudo php artisan optimize

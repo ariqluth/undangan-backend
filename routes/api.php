@@ -17,6 +17,7 @@ use App\Http\Controllers\Api\ApiChartDataController;
 use App\Http\Controllers\Api\ApiItemsController;
 use App\Http\Controllers\Api\ApiKbliPerusahaanSearchController;
 use App\Http\Controllers\Api\ApiKbliSearchController;
+use App\Http\Controllers\Api\ApiManagementUser;
 use App\Http\Controllers\Api\ApiOrderListController;
 use App\Http\Controllers\Api\ApiOrdersController;
 use App\Http\Controllers\Api\CategoryController;
@@ -62,6 +63,7 @@ Route::group(
         Route::post('/auth/logout', [AuthController::class, 'logout']);
         Route::post('/reset-password', [AuthController::class, 'change_password']);
         Route::apiResource('profile', ApiProfilesController::class, ['as' => 'api']);
+        Route::apiResource('management-user', ApiManagementUser::class, ['as' => 'api']);
         Route::apiResource('item', ApiItemsController::class, ['as' => 'api']);
         Route::apiResource('order', ApiOrdersController::class, ['as' => 'api']);
         Route::apiResource('verify-order', ApiVerifyOrderController::class, ['as' => 'api']);
