@@ -1,37 +1,24 @@
 <?php
 
-use App\Http\Controllers\Api\ApiKabupatenController;
-use App\Http\Controllers\Api\ApiKBliController;
-use App\Http\Controllers\Api\ApiKecamatanController;
-use App\Http\Controllers\Api\ApiKelurahanController;
-use App\Http\Controllers\Api\ApiPerusahaanController;
-use App\Http\Controllers\Api\ApiUraianJenisPerusahaanController;
-use App\Http\Controllers\Api\ApiUraianResikoProyekController;
-use App\Http\Controllers\Api\ApiUraianSkalaUsahaController;
-use App\Http\Controllers\Api\ApiKbliPerusahaanController;
-use App\Http\Controllers\Api\ApiVisitorController;
-use App\Http\Controllers\Api\ApiMapController;
-use App\Http\Controllers\Api\ApiPopUpController;
+
 use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\Api\ApiChartDataController;
+
 use App\Http\Controllers\Api\ApiItemsController;
-use App\Http\Controllers\Api\ApiKbliPerusahaanSearchController;
-use App\Http\Controllers\Api\ApiKbliSearchController;
-// use App\Http\Controllers\Api\ApiManagementUser;
+
+use App\Http\Controllers\Api\ApiManagementUserController;
+
 use App\Http\Controllers\Api\ApiOrderListController;
 use App\Http\Controllers\Api\ApiOrdersController;
-use App\Http\Controllers\Api\CategoryController;
-use App\Http\Controllers\Api\ApiProfilePengusahaController;
+
 use App\Http\Controllers\Api\ApiProfilesController;
 use App\Http\Controllers\Api\ApiTamusController;
 use App\Http\Controllers\Api\ApiUndangansController;
 use App\Http\Controllers\Api\ApiVerifyOrderController;
-use App\Http\Controllers\ApiAssignApproveController;
-use App\Models\User;
+
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+
 use Illuminate\Support\Facades\Route;
-use Illuminate\Validation\ValidationException;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +50,7 @@ Route::group(
         Route::post('/auth/logout', [AuthController::class, 'logout']);
         Route::post('/reset-password', [AuthController::class, 'change_password']);
         Route::apiResource('profile', ApiProfilesController::class, ['as' => 'api']);
-        // Route::apiResource('management-user', ApiManagementUser::class, ['as' => 'api']);
+        Route::apiResource('management-user', ApiManagementUserController::class, ['as' => 'api']);
         Route::apiResource('item', ApiItemsController::class, ['as' => 'api']);
         Route::apiResource('order', ApiOrdersController::class, ['as' => 'api']);
         Route::apiResource('verify-order', ApiVerifyOrderController::class, ['as' => 'api']);

@@ -3,23 +3,30 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\LoginResource;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Password;
-use Illuminate\Validation\ValidationException;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Log;
 
-class ApiManagementUser extends Controller
+
+class ApiManagementUserController extends Controller
 {
     public function index()
     {
         $user = User::all();
         return response()->json($user);
     }
+
+    public function store(Request $request)
+    {
+       
+    }
+
+ 
+    public function show($id)
+    {
+     
+    }
+
+
 
     public function update(Request $request, $id)
     {
@@ -32,5 +39,10 @@ class ApiManagementUser extends Controller
         return response()->json($user);
     }
 
-   
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+        return response()->json(null, 204);
+    }
 }
