@@ -38,6 +38,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/login', [AuthController::class, 'webLogin']);
 Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/auth/register', [AuthController::class, 'register']);
+Route::get('/visitor', [ApiItemsController::class, 'index']);
 // Route::get('/profile-pengusaha/create', ProfilePengusahaController::class, 'create');
 
 Route::group(
