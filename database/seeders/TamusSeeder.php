@@ -16,6 +16,7 @@ class TamusSeeder extends Seeder
                 'undangan_id' => 1,
                 'nama_tamu' => 'ariq luthfi',
                 'nomer_tamu' => '01',
+                'email_tamu' => 'ttzluthfi@gmail.com',
                 'alamat_tamu' => 'nganjuk',
                 'status' => 'belum datang',
                 'kategori' => 'teman',

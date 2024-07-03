@@ -13,10 +13,11 @@ class VerifyOrder extends Model
 
     public function order()
     {
-    	return $this->belongsTo(Orders::class);
+        return $this->belongsTo(Orders::class, 'order_id');
     }
-    public function Profile()
+
+    public function profile()
     {
-    	return $this->belongsTo(Profiles::class);
+        return $this->belongsTo(Profiles::class, 'profile_id');
     }
 }

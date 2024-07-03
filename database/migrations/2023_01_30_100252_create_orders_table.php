@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('item_id')->nullable();
             $table->string('kode');
             $table->dateTime('tanggal_terakhir');
+            $table->string('jumlah');
             $table->enum('status', ['pending', 'verify', 'null'])->default('null');
             $table->foreign('profile_id')->references('id')->on('profiles')->restrictOnDelete();
             $table->foreign('item_id')->references('id')->on('items')->restrictOnDelete();

@@ -13,16 +13,18 @@ class Tamus extends Model
     protected $fillable = [
     	'undangan_id',
         'nama_tamu',
+        'email_tamu',
         'nomer_tamu',
         'alamat_tamu',
         'status',
         'kategori',
         'kodeqr',
+        'tipe_undangan',
     ];
 
 
     public function undangans()
     {
-    	return $this->belongsTo(Undangans::class);
+    	return $this->belongsTo(Undangans::class, 'undangan_id');
     }
 }

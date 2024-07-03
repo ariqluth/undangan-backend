@@ -13,11 +13,16 @@ class OrderList extends Model
 
     public function order()
     {
-    	return $this->belongsTo(Orders::class);
+        return $this->belongsTo(Orders::class, 'order_id');
     }
 
-    public function verify_order()
+    public function verifyorder()
     {
-    	return $this->belongsTo(VerifyOrder::class);
+        return $this->belongsTo(VerifyOrder::class, 'verify_order_id');
+    }
+
+    public function profile()
+    {
+        return $this->belongsTo(Profiles::class, 'profile_id');
     }
 }

@@ -10,7 +10,7 @@ class Undangans extends Model
     use HasFactory;
     protected $table = 'undangans';
     protected $fillable = [
-        'order_id', 'order_list_id', 'nama_pengantin_pria', 'nama_pengantin_wanita', 'tanggal_pernikahan', 'lokasi_pernikahan'
+        'order_id', 'order_list_id', 'nama_pengantin_pria', 'nama_pengantin_wanita', 'tanggal_pernikahan', 'lokasi_pernikahan' ,'longitude', 'latitude'
     ];
 
     public function order()
@@ -23,5 +23,9 @@ class Undangans extends Model
     	return $this->belongsTo(OrderList::class);
     }
 
+    public function tamus()
+    {
+        return $this->hasMany(Tamus::class, 'undangan_id');
+    }
 
 }

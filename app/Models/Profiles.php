@@ -16,10 +16,18 @@ class Profiles extends Model
         'username',
         'nomer_telepon',
         'alamat',
-        'gambar',
+     
     ];
 
+    public function orders()
+    {
+        return $this->hasMany(Orders::class, 'profile_id');
+    }
 
+    public function verifyorder()
+    {
+        return $this->hasMany(VerifyOrder::class, 'profile_id');
+    }
     public function user()
     {
     	return $this->belongsTo(User::class);

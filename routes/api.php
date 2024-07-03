@@ -40,6 +40,7 @@ Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/auth/register', [AuthController::class, 'register']);
 Route::get('/visitor', [ApiItemsController::class, 'index']);
 // Route::get('/profile-pengusaha/create', ProfilePengusahaController::class, 'create');
+Route::get('/tamu/{undangan_id}/share/', [ApiTamusController::class, 'getShareUndangan'])->name('api.undangan.share');
 
 Route::group(
     ['middleware' => 'auth:sanctum'],
@@ -54,10 +55,21 @@ Route::group(
         Route::apiResource('management-user', ApiManagementUserController::class, ['as' => 'api']);
         Route::apiResource('item', ApiItemsController::class, ['as' => 'api']);
         Route::apiResource('order', ApiOrdersController::class, ['as' => 'api']);
+        Route::get('order/profile/{profile_id}', [ApiOrdersController::class, 'showByProfileId']);
+        Route::get('order/broadcast/{id}', [ApiOrdersController::class, 'broadcastOrder']);
+        Route::get('order/close/{id}', [ApiOrdersController::class, 'cancelOrder']);
+        Route::get('/order/status/verify', [ApiOrdersController::class, 'getOrderStatus']);
         Route::apiResource('verify-order', ApiVerifyOrderController::class, ['as' => 'api']);
         Route::apiResource('order-list', ApiOrderListController::class, ['as' => 'api']);
         Route::apiResource('undangan', ApiUndangansController::class, ['as' => 'api']);
         Route::apiResource('tamu', ApiTamusController::class, ['as' => 'api']);
-
+        Route::get('/verify-order/petugas/{id_petugas}', [ApiVerifyOrderController::class, 'getOrdersByPetugas']);
+        Route::get('/order-list/petugas/{id_petugas}', [ApiOrderListController::class, 'getByPetugas']);
+        Route::get('/undangan/petugas/{order_list_id}', [ApiUndangansController::class, 'getUndanganByPetugas']);
+        Route::post('/undangan/petugas/{order_list_id}', [ApiUndangansController::class, 'createUndanganByPetugas']);
+        Route::get('/order-list/dropdown/{orderlist_id}', [ApiOrderListController::class, 'getOrderDropdown']);
+        Route::get('/tamu/petugas/{undangan_id}', [ApiTamusController::class, 'getTamuByPetugas']);
+        Route::put('/tamu/{id}/update-status', [ApiTamusController::class, 'updateStatus']);
+  
     }
 );

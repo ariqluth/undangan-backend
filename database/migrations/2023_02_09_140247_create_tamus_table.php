@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('undangan_id')->references('id')->on('undangans')->restrictOnDelete();
             $table->string('nama_tamu');
             $table->string('nomer_tamu');
+            $table->string('email_tamu');
             $table->string('alamat_tamu');
             $table->enum('status', ['datang', 'belum datang']);
             $table->enum('kategori', ['family', 'teman']);

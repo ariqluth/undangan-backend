@@ -4,11 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
 
-use App\Models\User;
-use App\Models\KategoriArtikel;
 
 class Items extends Model
 {
@@ -23,11 +19,11 @@ class Items extends Model
        
     ];
 
-    public function profile()
-    {
-    	return $this->belongsTo(Profiles::class);
-    }
 
+    public function orders()
+    {
+        return $this->hasMany(Orders::class, 'item_id');
+    }
    
 
 

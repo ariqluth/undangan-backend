@@ -28,11 +28,11 @@ use App\Http\Controllers\KategoriArtikelController;
 use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SecurityControler;
-
-
+use App\Http\Controllers\UndanganController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VisitorArtikelController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +53,7 @@ Route::get('/show-artikel', [VisitorArtikelController::class, 'show'])->name('vi
 Route::get('/show-map', [VisitorController::class, 'mapvisitor'])->name('visitor.mapvisitor');
 Route::get('/show-artikel-detail/{visitor:slug}', [VisitorArtikelController::class, 'detail'])->name('visitor.detail');
 
-
+Route::get('/undangan/{undangan_id}/', [UndanganController::class, 'utama'])->name('undangan.utama');
 // Route::get('/', [VisitorController::class, 'index'])->middleware('permission.or.visitor:visitor.index');
 
 

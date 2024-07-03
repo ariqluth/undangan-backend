@@ -11,10 +11,16 @@ class ProfilesSeeder extends Seeder
     {
         Profiles::insert ([
             [
-                'user_id' => '2',
+                'user_id' => '1',
                 'username'=> 'lumina',
                 'nomer_telepon'=> '082151234567912',
                 'alamat'=> 'Malang',
+            ],
+            [
+                'user_id' => '2',
+                'username'=> 'batara',
+                'nomer_telepon'=> '082151234567913',
+                'alamat'=> 'Nganjuk',
             ],
             [
                 'user_id' => '3',

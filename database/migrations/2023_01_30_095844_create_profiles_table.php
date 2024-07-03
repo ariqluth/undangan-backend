@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('username');
             $table->string('nomer_telepon');
             $table->string('alamat');
-            $table->string('gambar')->nullable();
+    
             $table->timestamps();
         });
     }
