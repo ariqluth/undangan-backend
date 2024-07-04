@@ -7,73 +7,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f3f4f6;
-            color: #333;
-        }
-        .invitation-container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 30px;
-            border: 2px solid #e0e0e0;
-            border-radius: 15px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .invitation-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .invitation-header h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3em;
-            color: #d4af37;
-        }
-        .invitation-header h2 {
-            font-size: 2em;
-            color: #555;
-        }
-        .invitation-body {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .invitation-body p {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .invitation-footer {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .invitation-footer p {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-        .tamu-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-        .tamu-list li {
-            font-size: 1em;
-            margin-bottom: 5px;
-        }
-        .decorative-line {
-            width: 100px;
-            height: 2px;
-            background-color: #d4af37;
-            margin: 20px auto;
-        }
-        #map {
-            height: 300px;
-            margin-top: 20px;
-        }
-        .qr-code {
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/bingkai/bingkai.css') }}" />
 </head>
 <body>
     <div class="invitation-container">
@@ -98,6 +33,7 @@
     </div>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
     <script src="https://unpkg.com/@bitjson/qr-code@1.0.2/dist/qr-code.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -127,7 +63,6 @@
                         document.getElementById('longitude').innerText = undangan.longitude;
                         document.getElementById('latitude').innerText = undangan.latitude;
 
-                        // Menampilkan peta
                         const map = L.map('map').setView([undangan.latitude, undangan.longitude], 13);
                         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -136,14 +71,32 @@
                             .bindPopup(`${undangan.lokasi_pernikahan}`)
                             .openPopup();
 
-                        // Menampilkan tamu
+                       
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(position => {
+                                const currentLocation = [position.coords.latitude, position.coords.longitude];
+                                L.Routing.control({
+                                    waypoints: [
+                                        L.latLng(currentLocation),
+                                        L.latLng(undangan.latitude, undangan.longitude)
+                                    ],
+                                    routeWhileDragging: true
+                                }).addTo(map);
+                            }, error => {
+                                console.error('Error getting current location:', error);
+                            });
+                        } else {
+                            console.error('Geolocation is not supported by this browser.');
+                        }
+
+                    
                         const tamuList = document.getElementById('tamu_list');
                         undangan.tamus.forEach((tamu, index) => {
                             const tamuItem = document.createElement('li');
                             tamuItem.innerText = `${tamu.nama_tamu} (${tamu.kategori}) - ${tamu.status}`;
                             tamuList.appendChild(tamuItem);
 
-                            // Generate QR code
+                            
                             const qrCodeContainer = document.createElement('qr-code');
                             qrCodeContainer.setAttribute('id', `qr${index}`);
                             qrCodeContainer.setAttribute('contents', tamu.kodeqr);
@@ -153,7 +106,7 @@
                             qrCodeContainer.setAttribute('style', 'width: 200px; height: 200px; margin: 2em auto; background-color: #fff;');
                             tamuItem.appendChild(qrCodeContainer);
 
-                            // Add image inside QR code
+                            
                             const img = document.createElement('img');
                             img.setAttribute('src', '{{ asset("assets/img/stisla.svg") }}');
                             img.setAttribute('slot', 'icon');

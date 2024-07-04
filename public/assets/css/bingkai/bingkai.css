@@ -1,0 +1,65 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+}
+.invitation-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.invitation-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.invitation-header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #d4af37;
+}
+.invitation-header h2 {
+    font-size: 2em;
+    color: #555;
+}
+.invitation-body {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.invitation-body p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.invitation-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+.invitation-footer p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+.tamu-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.tamu-list li {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+.decorative-line {
+    width: 100px;
+    height: 2px;
+    background-color: #d4af37;
+    margin: 20px auto;
+}
+#map {
+    height: 300px;
+    margin-top: 20px;
+}
+.qr-code {
+    margin-top: 20px;
+}
